@@ -14,258 +14,130 @@
   box-sizing: border-box;
 }
 
-
-
-
-
-
-
-/* For mobile phones: */
-[class*="col-"] {
-  width: 100%;
-}
-
-@media only screen and (min-width: 768px) {
-  /* For desktop: */
-  .col-1 {width: 8.33%;}
-  .col-2 {width: 16.66%;}
-  .col-3 {width: 25%;}
-  .col-4 {width: 33.33%;}
-  .col-5 {width: 41.66%;}
-  .col-6 {width: 50%;}
-  .col-7 {width: 58.33%;}
-  .col-8 {width: 66.66%;}
-  .col-9 {width: 75%;}
-  .col-10 {width: 83.33%;}
-  .col-11 {width: 91.66%;}
-  .col-12 {width: 100%;}
-}
-
-
-
-
-
-/* For mobile phones: */
-[class*="col-"] {
-  width: 100%;
-  
-}
-@media only screen and (max-width: 768px) {
-.imaa {
-   display: none;
-}
-.span1 {
-  color: red;
-  font-size: 1.2rem;
-}
-.para2 {
-  font-size: 1.2rem;
-  margin-top: 0.7rem;
-}
 .headd {
+  width: 100%;
+  background-color: purple;
   display: flex;
   flex-direction: row;
-  gap: 5rem;
-  background-color: gold;
+  gap: 25%;
+  height: 5rem;
+}
+.info {
+  margin-top: 1%;
+  margin-left: 2%;
+  font-size: 3rem;
+}
+.para2 {
+  margin-top: 0.7%;
+  font-size: 2rem;
+}
+.div11 {
+  display: flex;
+  flex-direction: row;
+  gap: 25%;
+  margin-top: 2%;
+}
+.hours {
+  background-color: aqua;
+  margin-left: 2%;
+}
+.operate {
+  background-color: lightgoldenrodyellow;
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+.headd {
+  background-color: red;
+  width: 100%;
+  
+  display: flex;
+  flex-direction: row;
+  gap: 15%;
+  height: 5rem;
+  
   
 }
 .info {
-  margin-top: 1rem;
-  font-size: 1.5rem;
-  margin-left: 1rem;
+  margin-top: 2%;
+  margin-left: 2%;
+  font-size: 3rem;
 }
-.rows {
-  margin-top: 2rem;
+.para2 {
+  margin-top: 2.7%;
+  font-size: 1.5rem;
+}
+.div11 {
+  display: flex;
+  flex-direction: row;
+  gap: 3%;
+  margin-top: 2%;
+}
+.hours {
+  width: 96.5%;
+}
+.hours > p {
+  font-size: 2rem;
+}
+.operate {
+  width: 90.5%;
+  margin-right: 1%;
+  
+}
+}
+
+
+
+
+@media only screen and (max-width: 400px) {
+.headd {
+  background-color: blue;
+ 
+  
+}
+.headd {
+  width: 100%;
+  
+  display: flex;
+  flex-direction: row;
+  gap: 10%;
+  height: 5rem;
+}
+.info {
+  margin-top: 2%;
+  margin-left: 2%;
+  font-size: 3rem;
+}
+.para2 {
+  margin-top: 2.7%;
+  font-size: 1.5rem;
+}
+.div11 {
   display: flex;
   flex-direction: column;
-  margin-left: 5rem;
-  gap: 5rem;
-  
+  gap: 2rem;
+  margin-top: 2%;
 }
-#image-1 {
-  border-radius: 50%;
+.hours {
+  width: 96.5%;
 }
-#image-2 {
-  border-radius: 50%;
-}
-.list-1 {
-  margin-left: 1rem;
+.hours > p {
   font-size: 2rem;
-  margin-top: 3rem;
-  display: none;
 }
-.section-1 > p {
-  padding-left: 0rem;
+.operate {
+  width: 96.5%;
+  margin-left: 1.9%;
 }
-.section-1 > button {
-  background-color: aquamarine;
-  margin-left: 2rem;
-}
-.section-2 > button {
-  background-color: aquamarine;
-  margin-left: 2rem;
-}
-.div11 {
-   display: flex;
-   flex-direction: column;
-   gap: 5rem;
-   margin-top: 3.4rem;
-  }
-  .operate {
-   width: 24rem;
-   height: 17.2rem;
-   background-color: crimson;
-   
-   text-align: center;
-   border-radius: 12px 12px 12px 12px;
-   margin-left: 0.5rem;
-  }
-  .operate h4 {
-   font-size: 1.5rem;
-   font-family: Georgia, 'Times New Roman', Times, serif;
-   color: white;
-  }
-  .operate button {
-   border-radius: 20px 20px 20px 20px;
-   background-color: rgb(134, 184, 235);
-   width: 12rem;
-   font-size: 1.1rem;
-   height: 2.5rem;
-   border: none;
-   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  }
-  .operate > p {
-   color: gainsboro;
-   font-size: 1.5rem;
-  }
-  .hours {
-   line-height: 8.5px;
-   margin-left: 0.8rem;
-   background-color: rgb(49, 159, 159);
-   width: 23.5rem;
-   height: 13rem;
-   font-size: 2rem;
-   padding-left: 2rem;
-   border-radius: 10px 10px 10px 10px;
-   box-shadow: 1px 1px 1px 1px black;
-  }
-  .hours p {
-   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-   font-size: 1rem;
-   
-  }
-  .hours span {
-    font-size: 1.5rem;
-  }
-
-
 }
 
-
-@media only screen and (min-width: 768px) {
-  /* For desktop: */
-  .col-1 {width: 8.33%;}
-  .col-2 {width: 16.66%;}
-  .col-3 {width: 25%;}
-  .col-4 {width: 33.33%;}
-  .col-5 {width: 41.66%;}
-  .col-6 {width: 50%;}
-  .col-7 {width: 58.33%;}
-  .col-8 {width: 66.66%;}
-  .col-9 {width: 75%;}
-  .col-10 {width: 83.33%;}
-  .col-11 {width: 91.66%;}
-  .col-12 {width: 100%;}
-}
-@media only screen and (min-width: 768px) {
-.para {
-  display: none;
-}
-.headd {
-  display: flex;
-  flex-direction: row;
-  gap: 15rem;
-  background-color: gold;
-}
-.span1 {
-  color: red;
-  font-size: 3rem;
-}
-.para2 {
-  font-size: 3rem;
-  text-align: center;
-  margin-left: 13rem;
-}
-.info {
-  margin-top: 1rem;
-  font-size: 3rem;
-  margin-left: 1rem;
-}
-
-#image-1 {
-  border-radius: 50%;
-}
-#image-2 {
-  border-radius: 50%;
-}
-.list-1 {
-  margin-left: 1rem;
-  font-size: 2rem;
-  margin-top: 3rem;
-}
-.rows {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: row;
-  
-}
-.div11 {
-   display: flex;
-   flex-direction: row;
-   gap: 10rem;
-   margin-top: 3.4rem;
-  }
-  .operate {
-   width: 54rem;
-   height: 17.2rem;
-   background-color: crimson;
-   
-   text-align: center;
-   border-radius: 12px 12px 12px 12px;
-  }
-  .operate h4 {
-   font-size: 1.5rem;
-   font-family: Georgia, 'Times New Roman', Times, serif;
-   color: white;
-  }
-  .operate button {
-   border-radius: 20px 20px 20px 20px;
-   background-color: rgb(134, 184, 235);
-   width: 20rem;
-   font-size: 2.4rem;
-   height: 4.5rem;
-   border: none;
-   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  }
-  .operate > p {
-   color: gainsboro;
-   font-size: 2rem;
-  }
-  .hours {
-   line-height: 12.5px;
-   margin-left: 1.5rem;
-   background-color: rgb(49, 159, 159);
-   width: 20rem;
-   height: 15rem;
-   font-size: 2rem;
-   padding-left: 2rem;
-   border-radius: 10px 10px 10px 10px;
-   box-shadow: 1px 1px 1px 1px black;
-  }
-  .hours p {
-   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  }
-}
 
 
 
@@ -278,41 +150,23 @@
     </style>
 </head>
 <body>
-  <div  class="col-12 headd">
+  <div  class=" headd">
     <span class="info fa fa-bars"></span>
     <p class="para2"><span class="span1">T and T</span>laundry services</p>
     
   </div>
   
-  <div class="rows">
-   <div class="col-4 list-1">
-    <ul>
-      <li>we offer pick up services</li>
-      <li>we offer delivery services</li>
-      <li>we wash iron and dry</li>
-    </ul>
-   </div>
-   <div class="col-4 section-1">
-    <img id="image-1" src="delivery.png" alt="">
-    <p>we offer the best pick up delivery services nation wide</p>
-    <button>click for delivery</button>
-   </div>
-   <div class="col-4 section-2">
-    <img id="image-2" src="laundryy.jpg" alt="" >
-    <p>we offer pick up services at your door step</p>
-    <button>click for pick up</button>
-   </div>
-    </div>
+ 
     <div class=" div11">
-      <div class="col-4 hours">
+      <div class=" hours">
          <h3 style="color: whitesmoke;width: 20rem;"><span class="fa fa-clock-o"></span> Opening Hours</h3><br>
          <p><span class="fa fa-calendar"></span> Monday-Saturday</p>
          <span>8 A.M - 4 PM</span>
-         <br><br><br><br>
+         <br>
          <p><span class="fa fa-calendar"></span> Sunday</p>
          <span style="color: red;">closed</span>
 </div>
-<div class="col-8 operate">
+<div class="operate">
    <h4>Our Special Offer</h4>
    <p>we offer a lot to our existing customers, to make them keep patronizing us and never stop supporting us</p>
    <button>Read More</button>
