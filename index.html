@@ -14,11 +14,7 @@
   box-sizing: border-box;
 }
 
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
+
 
 
 
@@ -45,11 +41,7 @@
   .col-12 {width: 100%;}
 }
 
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
+
 
 
 
@@ -82,6 +74,17 @@
   font-size: 1.5rem;
   margin-left: 1rem;
 }
+.rows {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin-left: 3rem;
+  
+}
+.section-1 {
+  display: block;
+}
+
 }
 
 
@@ -124,7 +127,26 @@
   font-size: 3rem;
   margin-left: 1rem;
 }
+
+#image-1 {
+  border-radius: 50%;
 }
+#image-2 {
+  border-radius: 50%;
+}
+.list-1 {
+  margin-left: 1rem;
+  font-size: 2rem;
+  margin-top: 3rem;
+}
+.rows {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  
+}
+}
+
 
 
 
@@ -142,8 +164,24 @@
     
   </div>
   
-  <div class="row">
-   
+  <div class="rows">
+   <div class="col-4 list-1">
+    <ul>
+      <li>we offer pick up services</li>
+      <li>we offer delivery services</li>
+      <li>we wash iron and dry</li>
+    </ul>
+   </div>
+   <div class="col-4 section-1">
+    <img id="image-1" src="delivery.png" alt="">
+    <p>we offer the best pick up delivery services nation wide</p>
+    <button>click for delivery</button>
+   </div>
+   <div class="col-4 section-2">
+    <img id="image-2" src="laundryy.jpg" alt="" >
+    <p>we offer pick up services at your door step</p>
+    <button>click for pick up</button>
+   </div>
     
       
    
