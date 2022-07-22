@@ -6,869 +6,163 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <style>
-        body {
-            background-color: rgb(220, 220, 220);
-            height: 180rem;
-            width: 100%;
-            border: 2px solid none;
-        }
-     .div1 p {
-        color: black;
-        text-align: center;
-        font-size: 4.2rem;
-        margin-top: 4.5%;
-        letter-spacing: 2px;
-     }
-     .icon {
-        margin-top: 5%;
-        font-size: 4rem;
-        margin-left: 1%;
-     }
-     #span1 {
-        color: rgb(59, 158, 188);
-     }
-     #span2 {
-        color: mediumvioletred;
-     }
-     .div2 {
-        background-color: lightseagreen;
-        
-        height: 45.5rem;
-        border: 2px transparent;
-        position: relative;
-        left: -0.5rem;
-        bottom: 209.5rem;
-        z-index: 3;
-        display: none;
-        border: 2px transparent;
-        
-        
-     }
-     @keyframes myMove {
-      from{width: 0rem;display: none;}
-      to {width: 25rem;display: block;}
-     }
-     @keyframes myName {
-      from{width: 25rem;}
-      to{width: 0rem;}
-     }
-     @keyframes myLeft {
-      from{left: 0rem};
-      to{left: 17rem;}
-     }
-     .div1 {
-        z-index: 1;
-        background-color: gold;
-      height: 6%;
-        width: 100%;
-       position: relative;
-       left: -0.5rem;
-       bottom: 2%;
-        display: flex;
-        flex-direction: row;
-        gap: 30%;
-     }
-     
-     .div3 {
-      display: flex;
-      flex-direction: row;
-      gap: 10rem;
-      margin-top: 3rem;
-      margin-left: 5rem;
-      
-      
-     }
-     .div4 {
-      border: 2px solid black;
-      width: 20rem;
-      height: 25rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-      border-right-style: none;
-      border-bottom-style: none;
-      border-top-style: none;
-      border-left-color: lightskyblue;
-      
-      margin-right: 5rem;
-     }
-     .div4 img {
-      border-radius: 50%;
-      width: auto;
-      height: 15rem;
-      margin-left: 2rem;
-     }
-     .div4 span {
-      padding-left: 2.6rem;
-     }
-     .div4 button {
-      border-radius: 5px 5px 5px 5px;
-      height: 2rem;
-      font-size: 1.5rem;
-      width: 25rem;
-      margin-left: 2rem;
-      padding-left: 2rem;
-      color: rgb(252, 252, 2);
-      background-color: steelblue;
-      border: none;
-      transition: all;
-      transition-duration: 2s;
-     }
-     .div4 button:hover {
-      background-color: cornsilk;
-      color: darkseagreen;
-     }
-     .list-1 {
-      font-size: 1.4rem;
-     }
-     #button-1 {
-      border-radius: 5px 5px 5px 5px;
-      height: 2rem;
-      font-size: 1.5rem;
-      width: 15rem;
-      margin-left: 2rem;
-      padding-left: 2rem;
-     color: lightgreen;
-     background-color: rgb(6, 77, 149);
-      border: none;
-     }
-     #button-1:hover {
-      background-color: goldenrod;
-      color: mistyrose;
-     }
-   .div8 {
-      display: none;
-   }
-  #image1 {
-   width: 35rem;
-  }
-  .div7 {
-   margin-left: 25rem;
-   margin-top: 5rem;
-  }
-  .hours {
-   line-height: 5.5px;
-   margin-left: 1.5rem;
-   background-color: rgb(49, 159, 159);
-   width: 20rem;
-   height: 20rem;
-   font-size: 2rem;
-   padding-left: 2rem;
-   border-radius: 10px 10px 10px 10px;
-   box-shadow: 1px 1px 1px 1px black;
-  }
-  .hours p {
-   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  }
-  .div11 {
-   display: flex;
-   flex-direction: row;
-   gap: 10rem;
-   margin-top: 3.4rem;
-  }
-  .operate {
-   width: 54rem;
-   height: 17.2rem;
-   background-color: crimson;
-   
-   text-align: center;
-   border-radius: 12px 12px 12px 12px;
-  }
-  .operate h4 {
-   font-size: 1.5rem;
-   font-family: Georgia, 'Times New Roman', Times, serif;
-   color: white;
-  }
-  .operate button {
-   border-radius: 20px 20px 20px 20px;
-   background-color: rgb(134, 184, 235);
-   width: 20rem;
-   font-size: 2.4rem;
-   height: 2.5rem;
-   border: none;
-   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  }
-  .operate > p {
-   color: gainsboro;
-   font-size: 2rem;
-  }
-  .categories {
-   display: flex;
-   flex-direction: row;
-   gap: 2.5rem;
-  }
-  .gallery {
-   width: 89.5rem;
-   height: 20rem;
-   background-color: rosybrown;
-   margin-top: 2rem;
-   margin-left: 3rem;
-  }
-  .services {
-   display: flex;
-   flex-direction: row;
-   gap: 1.2rem;
-   height: 30rem;
-   width: 100rem;
-   margin-left: 5rem;
-   
-  }
-  .categories-1 > h4:hover {
-   color: rgb(16, 92, 118);
-  }
-  .categories-1 {
-   display: none;
-  }
-  .div14 {
-   display: flex;
-   flex-direction: row;
-  }
-  .div15 {
-   background-color: aliceblue;
-   height: 30rem;
-   border: none;
-   width: 25rem;
-   margin-left: 5rem;
-   border-radius: 20%;
-   
-   
-  }
-  .div15:hover {
-   box-shadow: 5px 5px 5px 5px lightblue;
-  }
-  .div15 > h3 {
-   text-align: center;
-   color: black;
-   font-size: 1rem;
-  }
-  .div15 > p {
-   font-size: 2rem;
-   font-weight: bold;
-   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-   text-align: center;
-  }
-  .div15 > button {
-   background-color: rgb(30, 128, 161);
-   color: white;
-   border-radius: 30px 30px 30px 30px;
-   font-size: 2rem;
-   height: 3rem;
-   width: 19rem;
-   margin-left: 2.4rem;
-   margin-top: 2rem;
-   border: none;
-  }
-  .div15 > ul {
-   margin-left: 2.8rem;
-   font-size: 2rem;
-  }
-  .div13 {
-  margin-bottom: 19rem;
-  border: 2px transparent;
-  height: 40rem;
-  }
-  .div13 > h4 {
-   text-align: center;
-   font-family: cursive;
-   font-size: 5rem;
-  }
-  .div2 > p {
-   left: 7rem;
-   font-size: 1.5rem;
-  animation-name: myRight;
-  animation-duration: 1s;
-  animation-direction: normal;
-  position: relative;
-   
-  }
-  @keyframes myRight {
-   from{left: -5rem;}
-   to{left: 7rem;}
-  }
-  .div2 > p > a {
-   text-decoration: none;
-  }
-  .button-2 {
-   
-   height: 3.5rem;
-   width: 18rem;
-   background-color: lightsalmon;
-   font-size: 2rem;
-   border: none;
-   margin-bottom: 3rem;
-   position: relative;
-   left: 2rem;
-   animation-name: myButton;
-   animation-duration: 1s;
-   animation-direction: normal;
-  }
-  @keyframes myButton {
-   from{left: -21rem;}
-   to{left: 2rem;}
-  }
-  .button-2 > a {
-   text-decoration: none;
-  }
-  .footer {
-   height: 25rem;
-   width: 100%;
-   background-color: black;
-   margin-top: 10rem;
-   position: relative;
-   left: -0.5rem;
-   color: white;
-   
-  }
-  .footer-main {
-   display: flex;
-   flex-direction: row;
-   gap: 10rem;
-   padding-left: 5.5rem;
-  }
-  .footer-sec > p {
-   font-size: 1.5rem;
-  }
-  .footer-sec > p > span {
-   color: yellow;
-   font-size: 1.5rem;
-  }
-  .footer-quick-links > p > a {
-   text-decoration: none;
-   font-size: 1.5rem;
-   color: lightblue;
-  }
-  .footer-quick-links > h4 {
-   font-size: 2rem;
-  }
-  #email {
-   height: 2.5rem;
-   width: 17rem;
-  }
-  .face {
-   font-size: 1.5rem;
-   
-   background-color: rgb(6, 83, 108);
-   
-   height: 2rem;
-   width: 2rem;
-   padding-top: 1rem;
-   padding-left: 1rem;
-   border-radius: 70px 70px 70px 70px;
-  }
-  .twi {
-   font-size: 1.5rem;
-   
-   background-color: rgb(6, 83, 108);
-   
-   height: 2rem;
-   width: 2rem;
-   padding-top: 1rem;
-   padding-left: 1rem;
-   border-radius: 70px 70px 70px 70px;
-  }
-  .inst {
-   font-size: 1.5rem;
-   background-color: rgb(6, 83, 108);
-   
-   height: 2rem;
-   width: 2rem;
-   padding-top: 1rem;
-   padding-left: 1rem;
-   border-radius: 70px 70px 70px 70px;
-  }
-  #privacy {
-   display: flex;
-   flex-direction: row;
-   gap: 30rem;
-  }
-  .para-footer {
-   padding-left: 5rem;
-  }
-  #social-media {
-   display: flex;
-   flex-direction: row;
-   gap: 3.5rem;
-  }
-  .phone-img {
-   display: none;
-  }
-  .header-2 {
-   display: none;
-  }
-  .email-1 {
-   display: none;
-  }
-  #email-1 {
-   display: none;
-  }
-  @media only screen and (max-width: 768px) {
-   .icon {
-        margin-top: 8.4%;
-        font-size: 1.1rem;
-        margin-left: 1%;
-        
-     }
-     .div1 p {
-        color: black;
-        
-        font-size: 0.6rem;
-        margin-top: 8.8%;
-        letter-spacing: 1px;
-        
-     }
-     #span1 {
-        color: rgb(59, 158, 188);
-     }
-     #span2 {
-        color: mediumvioletred;
-     }
-     .div1 {
-        z-index: 1;
-        background-color: red;
-        height: 3%;
-        width: 100%;
-        position: relative;
-       left: -0.5rem;
-       bottom: 2%;
-        display: flex;
-        flex-direction: row;
-        gap: 2.8rem;
-     }
-     .phone-img {
-      display: flex;
-      flex-direction: row;
-      width: 29.4rem;
-      height: 20rem;
-      border: none;
-      gap: 0rem;
-      
-     }
-     .phone-img-1 {
-      display: block;
-     }
-     #image-11 {
-      margin-left: 2.1rem;
-      width: 25rem;
-      height: 15rem;
-      
-     }
-     .round {
-      width: 1rem;
-      height: 1rem;
-      border-radius: 20px 20px 20px 20px;
-      background-color: aliceblue;
-     }
-     .round-1 {
-      width: 1rem;
-      height: 1rem;
-      border-radius: 20px 20px 20px 20px;
-      background-color: grey;
-     }
-     .round-2 {
-      width: 1rem;
-      height: 1rem;
-      border-radius: 20px 20px 20px 20px;
-      background-color: grey;
-     }
-     .round-section {
-      display: flex;
-      flex-direction: row;
-      gap: 1.1rem;
-      margin-left: 11rem;
-      margin-top: 1rem;
-     }
-     #icon {
-      position: relative;
-      left: 27.8rem;
-      bottom: 11.9rem;
-      font-size: 1.3rem;
-     }
-     .list-1 {
-      
-      display: none;
-     }
-     .div4 {
-      border: 2px solid black;
-      width: 20rem;
-      height: 25rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-      border-right-style: none;
-      border-bottom-style: none;
-      border-top-style: none;
-      border-left-style: none;
-      
-      margin-right: 15rem;
-     }
-     .div4 img {
-      border-radius: 50%;
-      width: 18rem;
-      height: 15rem;
-      margin-left: -1rem;
-     }
-     .div4 span {
-      padding-left: 1rem;
-     }
-     .div4 button {
-      border-radius: 5px 5px 5px 5px;
-      height: 2rem;
-      font-size: 1.5rem;
-      width: 25rem;
-      margin-left: -2rem;
-      padding-left: 2rem;
-      color: rgb(252, 252, 2);
-      background-color: steelblue;
-      border: none;
-      transition: all;
-      transition-duration: 2s;
-     }
-     .div4 button:hover {
-      background-color: cornsilk;
-      color: darkseagreen;
-     }
-     .div3 {
-      display: flex;
-      flex-direction: column;
-      gap: 5rem;
-      
-      
-      
-     }
-     .header-2 {
-      display: inline;
-      text-align: center;
-      margin-right: 6rem;
-     }
-     .hours {
-      display: none;
-     }
-     .operate {
-   width: 24rem;
-   height: 16.2rem;
-   background-color: crimson;
-   
-   text-align: center;
-   border-radius: 12px 12px 12px 12px;
-   margin-left: 3rem;
-  }
-  .operate h4 {
-   font-size: 1.5rem;
-   font-family: Georgia, 'Times New Roman', Times, serif;
-   color: white;
-  }
-  .operate button {
-   border-radius: 20px 20px 20px 20px;
-   background-color: rgb(134, 184, 235);
-   width: 10rem;
-   font-size: 1.4rem;
-   height: 2.5rem;
-   border: none;
-   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  }
-  .operate > p {
-   color: gainsboro;
-   font-size: 1.3rem;
-  }
-  .categories {
-   display: flex;
-   flex-direction: row;
-   gap: 2.5rem;
-  }
-  .gallery {
-   width: 89.5rem;
-   height: 20rem;
-   background-color: rosybrown;
-   margin-top: 2rem;
-   margin-left: 3rem;
-  }
-  .services {
-   display: flex;
-   flex-direction: column;
-   gap: 2.2rem;
-   height: 70rem;
-   width: 20rem;
-   margin-left: 5rem;
-   
-  }
-  .categories-1 > h4:hover {
-   color: rgb(16, 92, 118);
-  }
-  .categories-1 > p {
-   display: block;
-   
-  }
-  .div14 {
-   display: flex;
-   flex-direction: column;
-   gap: 6.5rem;
-  }
-  .div15 {
-   background-color: aliceblue;
-   height:20rem;
-   border: none;
-   width: 20rem;
-   margin-left: 5rem;
-   border-radius: 20%;
-   
-   
-  }
-  .div15:hover {
-   box-shadow: 5px 5px 5px 5px lightblue;
-  }
-  .div15 > h3 {
-   text-align: center;
-   color: black;
-   font-size: 1rem;
-  }
-  .div15 > p {
-   font-size: 2rem;
-   font-weight: bold;
-   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-   text-align: center;
-  }
-  .div15 > button {
-   background-color: rgb(30, 128, 161);
-   color: white;
-   border-radius: 30px 30px 30px 30px;
-   font-size: 1.5rem;
-   height: 2rem;
-   width: 15rem;
-   margin-left: 2.4rem;
-   margin-top: 2rem;
-   border: none;
-  }
-  .div15 > ul {
-   margin-left: 2.8rem;
-   font-size: 1rem;
-  }
-  .div13 {
-  margin-bottom: 19rem;
-  border: 2px transparent;
-  height: 40rem;
-  }
-  .div13 > h4 {
-   text-align: center;
-   font-family: cursive;
-   font-size: 2rem;
-  }
-  .gallery {
-   display: none;
-  }
-  .footer {
-   height: 27rem;
-   width: 100%;
-   background-color: black;
-   margin-top: 10rem;
-   position: relative;
-   left: -0.5rem;
-   top: 25rem;
-   color: white;
-   
-  }
-  .footer-main {
-   display: flex;
-   flex-direction: row;
-   gap: 7rem;
-   padding-left: 1.5rem;
-  }
-  .footer-quick-links > p > a {
-   text-decoration: none;
-   font-size: 0.8rem;
-   color: lightblue;
-  }
-  #email {
-   height: 2.5rem;
-   width: 17rem;
-   display: none;
-  }
-  .email-1 {
-   display: inline;
-  }
-  #email-1 {
-   display: inherit;
-   height: 2.5rem;
-   width: 17rem;
-   margin-left: 1.5rem;
-  }
-  .face {
-   font-size: 1rem;
-   
-   background-color: rgb(6, 83, 108);
-   
-   height: 2rem;
-   width: 2rem;
-   padding-top: 1rem;
-   padding-left: 1rem;
-   border-radius: 70px 70px 70px 70px;
-  }
-  .twi {
-   font-size: 1rem;
-   
-   background-color: rgb(6, 83, 108);
-   
-   height: 2rem;
-   width: 2rem;
-   padding-top: 1rem;
-   padding-left: 1rem;
-   border-radius: 70px 70px 70px 70px;
-  }
-  .inst {
-   font-size: 1rem;
-   background-color: rgb(6, 83, 108);
-   
-   height: 2rem;
-   width: 2rem;
-   padding-top: 1rem;
-   padding-left: 1rem;
-   border-radius: 70px 70px 70px 70px;
-  }
-  .footer-sec > p {
-   font-size: 0.8rem;
-  }
-  .email {
-   display: none;
-  }
-  .footer-quick-links > h4 {
-   font-size: 0.9rem;
-  }
-  #privacy {
-   display: flex;
-   flex-direction: row;
-   gap: 4rem;
-  }
-  .para-footer {
-   padding-left: 1rem;
-   display: inline;
-   font-size: 0.8rem;
-  }
-  #social-media {
-   display: flex;
-   flex-direction: row;
-   gap: 0.9rem;
-  }
-  .div2 {
-        background-color: lightseagreen;
-        width: 80rem;
-        height: 37.5rem;
-        border: 2px transparent;
-        position: relative;
-        left: -0.5rem;
-        bottom: 279.5rem;
-        z-index: 3;
-        display: none;
-        border: 2px transparent;
-        
-        
-     }
-     .div2 > p {
-   
-   font-size: 1rem;
-  }
-  .div2 > p > a {
-   text-decoration: none;
-  }
-  .button-2 {
-   margin-left: 3.5rem;
-   height: 2.5rem;
-   width: 13rem;
-   background-color: lightsalmon;
-   font-size: 1rem;
-   border: none;
-   margin-bottom: 3rem;
-  }
-  .button-2 > a {
-   text-decoration: none;
-  }
-  #button-1 {
-      border-radius: 5px 5px 5px 5px;
-      height: 2rem;
-      font-size: 1rem;
-      width: 15rem;
-      margin-left: 0.7rem;
-      padding-left: 1rem;
-     color: lightgreen;
-     background-color: rgb(6, 77, 149);
-      border: none;
-     }
-     #button-1:hover {
-      background-color: goldenrod;
-      color: mistyrose;
-     }
-  .div4 button {
-      border-radius: 5px 5px 5px 5px;
-      height: 2rem;
-      font-size: 1rem;
-      width: 15rem;
-      margin-left: 0.7rem;
-      padding-left: 1rem;
-      color: rgb(252, 252, 2);
-      background-color: steelblue;
-      border: none;
-      transition: all;
-      transition-duration: 2s;
-     }
-     .div4 button:hover {
-      background-color: cornsilk;
-      color: darkseagreen;
-     }
-    
+ 
+ * {
+  box-sizing: border-box;
+}
 
-  }
+.headd {
+  width: 100%;
+  background-color: purple;
+  display: flex;
+  flex-direction: row;
+  gap: 25%;
+  height: 5rem;
+}
+.info {
+  margin-top: 1%;
+  margin-left: 2%;
+  font-size: 3rem;
+}
+.para2 {
+  margin-top: 0.7%;
+  font-size: 2rem;
+}
+.div11 {
+  display: flex;
+  flex-direction: row;
+  gap: 25%;
+  margin-top: 2%;
+}
+.hours {
+  background-color: aqua;
+  margin-left: 2%;
+}
+.operate {
+  background-color: lightgoldenrodyellow;
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+.headd {
+  background-color: red;
+  width: 100%;
+  
+  display: flex;
+  flex-direction: row;
+  gap: 15%;
+  height: 5rem;
+  
+  
+}
+.info {
+  margin-top: 2%;
+  margin-left: 2%;
+  font-size: 3rem;
+}
+.para2 {
+  margin-top: 2.7%;
+  font-size: 1.5rem;
+}
+.div11 {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2%;
+}
+.hours {
+  width: 96.5%;
+}
+.hours > p {
+  font-size: 2rem;
+}
+.operate {
+  width: 97.5%;
+  margin-left: 1.3%;
+  
+}
+}
+
+
+
+
+@media only screen and (max-width: 400px) {
+.headd {
+  background-color: yellow;
+ 
+  
+}
+.headd {
+  width: 100%;
+  
+  display: flex;
+  flex-direction: row;
+  gap: 7%;
+  height: 5rem;
+}
+.info {
+  margin-top: 5.8%;
+  margin-left: 2%;
+  font-size: 1.3rem;
+}
+.para2 {
+  margin-top: 5.7%;
+  font-size: 1.1rem;
+}
+.div11 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2%;
+}
+.hours {
+  width: 57.9%;
+}
+.hours > p {
+  font-size: 1rem;
+}
+.operate {
+  width: 57.5%;
+  margin-left: 1.9%;
+}
+}
+
+
+
+
+
+
+
+       
+  
+  
     </style>
 </head>
 <body>
-   <div class="div1">
-    <i onclick="openFunction()"  class="icon fa fa-bars"></i>
-    <p><span id="span1">T</span> and <span id="span2">T</span> laundry service</p>
-   </div>
-   <div class="phone-img">
-      <div>
-<span onclick="slide()" style="margin-top: 5rem;font-size: 1.3rem;margin-left: 0.3rem;" class="fa fa-angle-left"></span>
-      </div>
-<div class="phone-img-1">
-   <img id="image-11" src="hanger2.jpg" alt=""> 
-   <div class="round-section">
-   <div class="round"></div>
-   <div class="round-1"></div>
-   <div class="round-2"></div>
-   </div>
-   
-   <div><span  onclick="clickSliding()"  id="icon" class="fa fa-angle-right"></span></div>
-
-   
-</div>
-
+  <div  class=" headd">
+    <span class="info fa fa-bars"></span>
+    <p class="para2"><span class="span1">T and T</span>laundry services</p>
+    
+  </div>
   
-
-   </div>
-   <div class="div3">
-     <div class="list-1"><h3>what we offer</h3>
-      <ul>
-         <li>we help you save the stress of washing.</li>
-         <li>we also offer pickups.</li>
-         <li>we deliver when needed at the right time.</li>
-         <li>we also deliver at a cheaper price.</li>
-      </ul>
-     </div>
-     <h2 class="header-2">Why Choose Us?</h2>
-     <div class="div4">
-      <img src="delivery.png" alt="">
-      <span>we offer the best delivery services and save you the stress of driving down to pick up</span>
-      <button>schedule your first delivery</button>
-     </div>
-     <div class="div4">
-      <img src="laundryy.jpg" alt="">
-      <span>we also offer pickup service at your door step</span>
-      <button id="button-1">click for pick up</button>
-     </div>
-   </div>
-   <div class="div11">
-      <div class="hours">
-         <h3 style="color: whitesmoke;width: 20rem;"><span class="fa fa-clock-o"></span> Opening Hours</h3>
+ 
+    <div class=" div11">
+      <div class=" hours">
+         <h3 style="color: whitesmoke;width: 20rem;"><span class="fa fa-clock-o"></span> Opening Hours</h3><br>
          <p><span class="fa fa-calendar"></span> Monday-Saturday</p>
          <span>8 A.M - 4 PM</span>
+         <br>
          <p><span class="fa fa-calendar"></span> Sunday</p>
          <span style="color: red;">closed</span>
 </div>
@@ -878,242 +172,8 @@
    <button>Read More</button>
 </div>
    </div>
-   <div class="gallery">
-      <h2 style="text-align: center;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Our Gallery</h2>
-      <div class="categories">
-         <img src="dirty.jpg" alt="" style="margin-left: 2rem;">
-         <img src="washing.jpg" alt="">
-         <img src="iron.jpg" alt="">
-         <img src="fold2.jpg" alt="">
-         <img src="hanger.jpg" alt="">
-      </div>
-   </div>
-   <div>
-      <h4 style="text-align: center;color: rgb(187, 108, 10);font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 2rem;">This is how we work</h4>
-      <div class="services">
-         <div class="categories-1">
-            <img style="border-radius: 50%;" src="baby.jpg" alt="">
-            <h4>WE PICK YOUR CLOTHES</h4>
-            <p>The automated process starts as soon as your clothes go into the machine. The outcome is gleaming clothes!</p>
-         </div>
-         <div class="categories-1">
-            <img src="time.png" alt="" style="border-radius: 50%;">
-            <h4>QUICKER DELIVERY</h4>
-            <P>We ensure delivery in the quickest of the turnaround time in the industry. Superior quality of service with speed!</P>
-         </div>
-         <div class="categories-1">
-            <img src="hang.jpg" alt="" style="border-radius: 50%;">
-            <h4>DELIVERY AT FOOTSTEPS</h4>
-            <p>We have pioneered the concept of pickup and delivery in the shortest possible time. We intend keeping it that way!</p>
-         </div>
-      </div>
-   </div>
-   <div class="div13">
-      
-      <h4>checkout our laundry prices</h4>
-      <div class="div14">
-         <div class="div15">
-            <p>Men section</p>
-<h3><span style="font-size: 2.5rem;color:lightcoral">$53.00</span> / month</h3>
-<ul>
-   <li>we wash and dry</li>
-   <li>we iron and fold</li>
-   <li>we deliver to your doorstep</li>
-</ul>
-<button>click to subscribe</button>
-         </div>
-         <div class="div15">
-            <p>Women section</p>
-<h3><span style="font-size: 2.5rem;color:lightcoral">$73.00</span> / month</h3>
-<ul>
-   <li>we wash and dry</li>
-   <li>we iron and fold</li>
-   <li>we deliver to your doorstep</li>
-</ul>
-<button>click to subscribe</button>
-         </div>
-         <div class="div15">
-            <p>Children section</p>
-<h3><span style="font-size: 2.5rem;color:lightcoral">$23.00</span> / month</h3>
-<ul>
-   <li>we wash and dry</li>
-   <li>we iron and fold</li>
-   <li>we deliver to your doorstep</li>
-</ul>
-<button>click to subscribe</button>
-         </div>
-      </div>
-   </div>
- 
-   <div class="footer">
-      <div class="footer-main">
-<div class="footer-sec">
-   <h4>INFORMATION</h4>
-   <p ><span  class="fa fa-phone"></span> 08109713706</p>
-   <p ><span  class="fa fa-envelope"></span> kazeemquayum67@gmail.com</p>
-   <p ><span  class="fa fa-map-marker"></span>14 olanrewaju street ikorodu.</p>
-</div>
-<div class="footer-quick-links">
-   <h4>Quick Links</h4>
-   <p><a href="">Men section</a></p>
-   <p><a href="">Women section</a></p>
-   <p><a href="">Children section</a></p>
-   <p><a href="">Gallery</a></p>
-</div>
-<div class="email">
-   <h4 style="font-size: 2rem;">SUBSCRIBE TO OUR NEWS LETTER</h4>
-   <input type="email" name="" id="email" placeholder="put in a valid email">
-   <button style="height: 2.5rem;width: 7.5rem;background-color:brown;color: black;font-size: 1.1rem;">submit</button>
-</div>
-      </div>
-      <div class="email-1">
-         <h4 style="font-size: 1rem;padding-left: 2rem;">SUBSCRIBE TO OUR NEWS LETTER</h4>
-         <input type="email" name="" id="email-1" placeholder="put in a valid email">
-         <button style="height: 2.5rem;width: 7.5rem;background-color:brown;color: black;font-size: 1.1rem;">submit</button>
-      </div>
-      <div>
-         <hr>
-         <div id="privacy" >
-     <div class="para-footer"><p>privacy/This is my website-kazeem © 2022 / All Rights Reserved</p></div>
-      <div id="social-media" >
-        <p><span  class="face fa fa-facebook"></span></p>
-         <p><span class="twi fa fa-twitter"></span></p>
-         <p><span class="inst fa fa-instagram"></span></p>
-                  </div>
-         </div>
-       
-      </div>
-
-
-
-   </div>
-   <div class="div2">
-      <span onclick="myFunction1()"  id="span-1" style="float: right;color:white;font-size:3rem;font-family:cursive;cursor:pointer;font-weight:bolder;">X</span><br><br><br><br>
-      <p><a href="">Men section</a></p><br>
-  <hr>
-      <p><a href="">Women section</a></p><br>
-      <hr>
-      <p><a href="">Children section</a></p><br>
-      <hr>
-      <p><a href=""> Gallery</a></p><br>
-      <hr>
-      <p><a href="">News</a></p><br><br>
-      <button class="button-2"><a href="">Login</a></button>
-      
-     </div>
    
-   
-   
-   
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script>
-$(function(){
-   $("body").hover(function(){
-      $(".categories-1").fadeIn(2000)
-   })
-})
-
-
-var d = 0;
-        function openFunction() {
-        let opens = document.querySelector(".div2");
-        let y =  document.querySelector(".div2").children;
-        
-         opens.style.animationName = "myMove" 
-      opens.style.animationDuration = "1s"
-      opens.style.animationDirection = "normal"
-      opens.style.display = "block"
-      opens.style.width = "25rem"
-      for(let i = 0; i < y.length; i++) {
-         y[i].style.display = "block"
-      }
-        
-    }
-    function myFunction1() {
-      let opens = document.querySelector(".div2");
-      let y =  document.querySelector(".div2").children;
-      if(opens.style.display == "block") {
-      opens.style.animationName = "myName" 
-      opens.style.animationDuration = "2s"
-   
-      opens.style.width = "0rem"
-      for(let i = 0; i < y.length; i++) {
-         y[i].style.display = "none"
-      }
-      
-      
-      }
-    }
     
-    
-   
-    function clickSliding() {
-      let image =  document.querySelector(".phone-img-1")
-      let image1 = document.getElementById("image-11");
-      let image2 = document.getElementById("image-12");
-      let round = document.querySelector(".round");
-      let round1 = document.querySelector(".round-1");
-      let round2 = document.querySelector(".round-2");
-      
-      d++
-      
-      if(d == 1) {
-image1.src = "laundryy.jpg"
-round.style.backgroundColor = "grey"
-      round1.style.backgroundColor = "white"
-      round2.style.backgroundColor = "grey"
-
-      }
-     if(d == 2) {
-         round.style.backgroundColor = "grey"
-      round1.style.backgroundColor = "grey"
-      round2.style.backgroundColor = "white"
-
-      image1.src = "washing.jpg"
-  
-      }
-      if(d == 3) {
-         round.style.backgroundColor = "white"
-      round1.style.backgroundColor = "grey"
-      round2.style.backgroundColor = "grey"
-
-      image1.src = "hanger2.jpg"
-      d = 0;
-      }
-    }
-    function slide() {
-      let image =  document.querySelector(".phone-img-1")
-      let image1 = document.getElementById("image-11");
-      let image2 = document.getElementById("image-12");
-      let round = document.querySelector(".round");
-      let round1 = document.querySelector(".round-1");
-      let round2 = document.querySelector(".round-2");
-      
-      d--
-      if(d == 1) {
-image1.src = "laundryy.jpg"
-round.style.backgroundColor = "grey"
-      round1.style.backgroundColor = "white"
-      round2.style.backgroundColor = "grey"
-
-      }
-      if(d == 0) {
-         round.style.backgroundColor = "white"
-      round1.style.backgroundColor = "grey"
-      round2.style.backgroundColor = "grey"
-
-      image1.src = "hanger2.jpg"
-  
-      } 
-      if(Math.sign(d) == -1) {
-d = 0;
-
-      }
-    }
-    
-  
-    </script>
    
 </body>
 </html>
-
