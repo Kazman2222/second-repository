@@ -461,6 +461,9 @@ font-size: 2rem;
         margin-left: 0.6rem;
         display: none;
      }
+     .seconds-container {
+      display: none;
+     }
 
 
  
@@ -474,7 +477,7 @@ font-size: 2rem;
  }
  .top-paragraph {
     font-size: 1rem;
-    margin-top: 3.1%;
+    margin-top: 3.5%;
     font-family: fantasy;
     padding-left: 2%;
     color: rgb(150, 57, 57);
@@ -511,6 +514,47 @@ font-size: 1.5rem;
         display: inline;
         
      }
+     .second-container {
+    display: none;
+    flex-direction: column;
+    background-color: grey;
+    width: 100%;
+    gap:3rem;
+    margin-top: 2%;
+ }
+ 
+ .seconds-container {
+    display: flex;
+    flex-direction: column;
+    background-color: grey;
+    width: 100%;
+    gap:2rem;
+    margin-top: 2%;
+ }
+ .seconds-paragraph p {
+    font-size: 2.5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    padding-left: 2%;
+    padding-top: 2%;
+    
+    
+ }
+ .seconds-paragraph button {
+    width: 80.5%;
+    font-size: 2rem;
+    margin-left: 7%;
+    border-radius: 10px 10px 10px 10px;
+    background-color: turquoise;
+    border: none;
+ }
+ .images-container {
+    margin: 10px 0px 0px 10px;
+    
+ }
+ .images-container > img {
+  width: 98.3%;
+ }
 
  }
  @media only screen and (max-width: 400px) {
@@ -549,170 +593,19 @@ font-size: 1.5rem;
             <img id="" src="woma.jpg" alt="">
         </div>
     </div>
-    <div class="third-container">
-        <div class="about-services">
-<span>About Our services</span>
-<h4>Clean,Fast,Pickup and Delivery</h4>
-        </div>
-        <div class="services">
-            <p>In the cleaning industry we have one of the best services</p>
-            <button>Our Services</button>
-        </div>
+    <div class="seconds-container">
+      <div class="images-container">
+        <img id="" src="woma.jpg" alt="">
     </div>
-    <div>
-        <div class="second-image-container">
-            <div class="image-gallery">
-        <img id="image-1" src="laundryy.jpg" alt="">
-        <p>we wash your clothes to your own satisfaction</p>
-        <button>Click to learn more</button>
-            </div>
-     <div class="image-gallery">
-           <img  id="image-2" src="iron.jpg" alt="">
-           <p>we iron your clothes and keep it smoooth all day long</p>
-           <button id="btn-1">Click to learn more</button>
-        </div>
-       <div class="image-gallery"><img id="image-3" src="hanger2.jpg" alt="">
-    <p>we always make sure your clothes are hanged and maintained properly</p>
-    <button>click to learn more</button>
-    </div>
-        
-    </div>
-    <div class="fourth-container">
-      <div class="pricing">
-         <p>Pricing and Plan</p>
-         <h3>Our Affordable Prices</h3>
-         <p>We offer the best pricing services with high quality services</p>
-         <button>Show More</button>
+      <div class="seconds-paragraph">
+      
+      <p>We at roseline laundry services,we always promise to keep your clothes clean and ironed 24 Hours and your smile is our priority.</p>
+      <button>Discover More</button>
       </div>
-      <div class="price-1">
-         
-         <p ><span class="span1">$30</span>/Month</p>
-         <p>Dry package</p>
-         <hr>
-         <ul>
-            <li>Dry cleaning</li>
-            <li>Shirt services</li>
-            <li>Bedding</li>
-            <li>iron & fold</li>
-            <li>Delivery services</li>
-         </ul>
-         <button>Purchase Now</button>
-      </div>
-      <div class="price-2">
-         
-         <p ><span class="span1">$55</span>/Month</p>
-         <p>Dry package</p>
-         <hr>
-         <ul>
-            <li>Dry cleaning</li>
-            <li>Shirt services</li>
-            <li>Bedding</li>
-            <li>iron & fold</li>
-            <li>Delivery services</li>
-            <li>pickup services</li>
-         </ul>
-         <button>Purchase Now</button>
-      </div>
-    </div>
-    <div class="fifth-container">
-      <div class="fifth-image">
-         <img src="multple.jpg" alt="">
-      </div>
-      <div class="how-it-works">
-         <h3>How it Works</h3>
-         <div class="process">
-            <div>
-               <img src="both.jpg" alt="">
-               <br><br>
-               <p>we collect your dirty clothes at the righ time</p>
-            </div>
-            <div>
-               <img src="combine.png" alt="">
-               <br><br>
-               <p>we wash your clothes on time and make them available</p>
-            </div>
-            <div>
-               <img src="hanged.jpg" alt="">
-               <br><br>
-               <p>we keep your clothes ironed and hanged all the time</p>
-            </div>
-            
-         </div>
-      </div>
-    </div>
-    <div class="sixth-container">
-      <div class="opening-soon">
-        <h3>SPECIAL OFFERS</h3>
-        <P>We offer special services to our customer to increase our relationship with them </P>
-      </div>
-      <div class="time">
-        <h3>LAUNCHING SOON</h3>
-        <div class="time-down">
-          <div ><p style="background-color: yellow;text-align: center;" id="yemo">2</p>
-       <p style="color: white;">DAYS</p>
-       </div>
-       
-           <div> <p style="background-color: yellow;text-align: center;" id="semo">0</p>
-           <p style="color: white;">HOURS</p>
-           </div>
-        <div> <p style="background-color: yellow;text-align: center;" id="temo">0</p>
-       <p style="color: white;">MINUTES</p>
-       </div>
-         <div> <p style="background-color: yellow;text-align: center;" id="demo">0</p>
-       <P style="color: white;">SECONDS</P>
-         </div>
-       </div>
-      </div>
-    </div>
-    <div class="footer">
-      <div class="footer-main">
-<div class="footer-sec">
-   <h4>INFORMATION</h4>
-   <p ><span  class="fa fa-phone"></span> 08109713706</p>
-   <p ><span  class="fa fa-envelope"></span> kazeemquayum67@gmail.com</p>
-   <p ><span  class="fa fa-map-marker"></span>14 olanrewaju street ikorodu.</p>
-</div>
-<div class="footer-quick-links">
-   <h4>Quick Links</h4>
-   <p><a href="">Men section</a></p>
-   <p><a href="">Women section</a></p>
-   <p><a href="">Children section</a></p>
-   <p><a href="">Gallery</a></p>
-</div>
-<div class="email">
-   <h4>SUBSCRIBE TO OUR NEWS LETTER</h4>
-   <input type="email" name="" id="email" placeholder="put in a valid email">
-   <button >submit</button>
-</div>
-      </div>
-     
-      <div>
-         <hr>
-         <div id="privacy" >
-     <div class="para-footer"><p>privacy/This is my website-kazeem © 2022 / All Rights Reserved</p></div>
-      <div id="social-media" >
-        <p><span  class="face fa fa-facebook"></span></p>
-         <p><span class="twi fa fa-twitter"></span></p>
-         <p><span class="inst fa fa-instagram"></span></p>
-                  </div>
-         </div>
-       
-      </div>
-      <div class="div2">
-        <span onclick="myFunction1()"  id="span-1" style="float: right;color:white;font-size:3rem;font-family:cursive;cursor:pointer;font-weight:bolder;">X</span><br><br><br><br>
-        <p><a href="">Men section</a></p><br>
-    <hr>
-        <p><a href="">Women section</a></p><br>
-        <hr>
-        <p><a href="">Children section</a></p><br>
-        <hr>
-        <p><a href=""> Gallery</a></p><br>
-        <hr>
-        <p><a href="">News</a></p><br><br>
-        <button class="button-2"><a href="">Login</a></button>
-        
-       </div>
-
+      
+  </div>
+   
+    
 
    <script>
      var d = 0;
