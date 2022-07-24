@@ -467,32 +467,33 @@ font-size: 2rem;
 
 
  
- @media only screen and (max-width: 768px) {
+     @media only screen and (max-width: 600px) {
   .main-content {
     width: 100%;
     display: flex;
     flex-direction: row;
-    gap: 3.5rem;
-    background-color: green;
+    gap: 35px;
+    background-color: rgb(41, 149, 185);
+    
  }
  .top-paragraph {
     font-size: 1rem;
-    margin-top: 3.5%;
-    font-family: fantasy;
+    
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     padding-left: 2%;
     color: rgb(150, 57, 57);
  }
  .unordered-list {
     list-style-type: none;
-    display: none;
+    display: inline;
     margin-top: 1.8rem;
     width: 100%;
  }
  .unordered-list li {
-    display: inline;
+    display: none;
    color: white; 
 margin: 2rem;
-font-size: 1.5rem;
+font-size: 1rem;
  }
  .div2 {
         background-color: lightseagreen;
@@ -508,10 +509,11 @@ font-size: 1.5rem;
         
      }
      .icon {
-        margin-top: 2%;
+        margin: 2% 7%;
         font-size: 1.5rem;
-        margin-left: 1.5%;
+        float: right;
         display: inline;
+        
         
      }
      .second-container {
@@ -519,7 +521,7 @@ font-size: 1.5rem;
     flex-direction: column;
     background-color: grey;
     width: 100%;
-    gap:3rem;
+    gap:1.5rem;
     margin-top: 2%;
  }
  
@@ -529,15 +531,15 @@ font-size: 1.5rem;
     background-color: grey;
     width: 100%;
     
-    gap:2rem;
+    gap:0rem;
     
  }
  .seconds-paragraph p {
-    font-size: 2.3rem;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.8rem;
+    font-family: 'Times New Roman', Times, serif;
     
-    padding-left: 2.5%;
-    padding-top: 2%;
+    padding: 2% 7%;
+    
     
     
  }
@@ -555,10 +557,241 @@ font-size: 1.5rem;
     
  }
  .images-container > img {
-  width: 100%;
+  width: 90.5%;
+  margin: 0% 5%;
+  
  }
+ .third-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0%;
+    gap: 0rem;
+    margin-top: 3%;
+    padding: 0% 5.5%;
+    
+    
+    
+ }
+ .about-services h4 {
+font-size: 2rem;
 
  }
+ .services {
+    font-size: 1.1rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    
+ }
+ .services > button {
+   background-color: lightgrey;
+   border: none;
+   border-radius: 7px 7px 7px 7px;
+   width: 60%;
+   
+ }
+ .services > button:hover {
+  background-color: lightcoral;
+
+ }
+ .second-image-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    gap: 2.5rem;
+    margin-top: 3%;
+    
+ }
+ .image-gallery {
+    background-color: darkcyan;
+    width: 85%;
+    border-radius: 13px 13px 13px 13px;
+    margin: 0% 5%;
+    height: auto;
+
+ }
+ .image-gallery img {
+    margin: 3.5% 0% 0% 17.5%;
+    width: 50%;
+ }
+ #image-3 {
+    margin-left: 23.5%;
+ }
+ .image-gallery p {
+    padding: 5.5% 2%;
+    font-size: 1rem;
+    
+    font-weight: lighter;
+ }
+ .image-gallery button {
+    
+    width: 70%;
+    margin: 4.5% 14%;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px 5px 5px 5px;
+    background-color: tomato;
+    color: ghostwhite;
+ }
+ #btn-1 {
+    margin-top: 5.8%;
+ }
+ #image-2 {
+    height: 7.6rem;
+    margin-left: 26%;
+ }
+ #image-1 {
+    margin-left: 22.3%;
+ }
+ .fourth-container {
+   display: flex;
+   flex-direction: column;
+   gap: 5rem;
+   margin: 140.5% 4.9%;
+   padding-left: 4%;
+   width: 90%;
+   background-color: rosybrown;
+   height: auto;
+   
+ }
+ .pricing > h3 {
+   font-size: 3rem;
+   font-weight: bolder;
+ }
+ .pricing {
+   margin-top: 10%;
+ }
+ .pricing > button {
+   width: 43.2%;
+   height: auto;
+   border-radius: 5px 5px 5px 5px;
+   border: none;
+   background-color: lightgrey;
+   font-size: 1.4rem;
+
+ }
+ .price-1 {
+   background-color: rgb(131, 115, 235);
+   width: 92%;
+   height: auto;
+   margin: 20px 8px;
+   border-radius: 13px 13px 13px 13px;
+ }
+ .price-1:hover li {
+   
+   color: khaki;
+ }
+ .price-1:hover p:nth-of-type(2) {
+   color: black;
+ }
+ .price-1:hover {
+   background-color: crimson;
+ }
+ .price-1 ul {
+   list-style-type: square;
+   margin-left: 2%;
+   color: darkgoldenrod;
+   
+ }
+ .price-1 li {
+   color: black;
+   font-size: 1.5rem;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   
+ }
+ .price-1 > span {
+   background-color: lightblue;
+   margin-left: 75%;
+   font-size: 1.1rem;
+   
+ }
+ .price-1 p:nth-of-type(1) {
+   font-size: 2rem;
+   
+ }
+ .price-1 p:nth-of-type(2) {
+   font-size: 3rem;
+   font-weight: bolder;
+   padding-left: 2.5%;
+   color: white;
+ }
+
+ 
+ .span1 {
+   color: black;
+   font-weight: bolder;
+   font-size: 4rem;
+   padding-left: 3%;
+ }
+ .price-1 > button {
+   width: 65%;
+   border: none;
+   
+   height: 3.5rem;
+   background-color: darkturquoise;
+   font-size: 1.2rem;
+   margin: 6% 15.9%;
+ }
+ .price-2 {
+   background-color: rgb(131, 115, 235);
+   width: 92%;
+   height: auto;
+   margin: 20px 8px;
+   border-radius: 13px 13px 13px 13px;
+ }
+ .price-2 ul {
+   list-style-type: square;
+   margin-left: 2%;
+   color: darkgoldenrod;
+   
+ }
+ .price-2 li {
+   color: black;
+   font-size: 1.5rem;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   
+ }
+
+ .price-2 p:nth-of-type(1) {
+   font-size: 2rem;
+   
+ }
+ .price-2 p:nth-of-type(2) {
+   font-size: 3rem;
+   font-weight: bolder;
+   padding-left: 2.5%;
+   color: white;
+ }
+ .price-2:hover li {
+   
+   color: khaki;
+ }
+ .price-2:hover p:nth-of-type(2) {
+   color: black;
+ }
+ .price-2:hover {
+   background-color: crimson;
+ }
+
+ 
+ .span1 {
+   color: black;
+   font-weight: bolder;
+   font-size: 4rem;
+   padding-left: 3%;
+ }
+ .price-2 > button {
+   width: 75%;
+   border: none;
+   
+   height: 3.5rem;
+   background-color: darkturquoise;
+   font-size: 1.2rem;
+   margin: 6% 13.1%;
+   
+ }
+ 
+}
  @media only screen and (max-width: 400px) {
  
  }
@@ -606,7 +839,73 @@ font-size: 1.5rem;
       </div>
       
   </div>
-   
+  <div class="third-container">
+    <div class="about-services">
+<span>About Our services</span>
+<h4>Clean,Fast,Pickup and Delivery</h4>
+    </div>
+    <div class="services">
+        <p>In the cleaning industry we have one of the best services</p>
+        <button>Our Services</button>
+    </div>
+</div>
+<div class="second-image-container">
+  <div class="image-gallery">
+<img id="image-1" src="laundryy.jpg" alt="">
+<p>we wash your clothes to your own satisfaction</p>
+<button>Click to learn more</button>
+  </div>
+
+<div class="image-gallery">
+<img  id="image-2" src="iron.jpg" alt="">
+<p>we iron your clothes and keep it smoooth all day long</p>
+<button id="btn-1">Click to learn more</button>
+</div>
+<div class="image-gallery"><img id="image-3" src="hanger2.jpg" alt="">
+<p>we always make sure your clothes are hanged and maintained properly</p>
+<button>click to learn more</button>
+</div>
+</div>
+<div class="fourth-container">
+   <div class="pricing">
+     <p>Pricing and Plan</p>
+     <h3>Our Affordable Prices</h3>
+     <p>We offer the best pricing services with high quality services</p>
+     <button>Show More</button>
+   </div>
+   <div class="price-1">
+     
+     <p ><span class="span1">$30</span>/Month</p>
+     <p>Dry package</p>
+     <hr>
+     <ul>
+        <li>Dry cleaning</li>
+        <li>Shirt services</li>
+        <li>Bedding</li>
+        <li>iron & fold</li>
+        <li>Delivery services</li>
+     </ul>
+     <button>Purchase Now</button>
+   </div>
+   <div class="price-2">
+     
+     <p ><span class="span1">$55</span>/Month</p>
+     <p>Dry package</p>
+     <hr>
+     <ul>
+        <li>Dry cleaning</li>
+        <li>Shirt services</li>
+        <li>Bedding</li>
+        <li>iron & fold</li>
+        <li>Delivery services</li>
+        <li>pickup services</li>
+     </ul>
+     <button>Purchase Now</button>
+   </div>
+   </div>
+
+
+
     
 
    <script>
