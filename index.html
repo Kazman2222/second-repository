@@ -516,20 +516,7 @@ font-size: 2rem;
 margin: 2rem;
 font-size: 1rem;
  }
- .div2 {
-        background-color: lightseagreen;
-        
-        height: 15.5rem;
-        border: 2px transparent;
-        position: absolute;
-        right: 0rem;
-        width: 100%;
-        z-index: 3;
-        display: none;
-        border: 2px transparent;
-        
-        
-     }
+ 
      .icon {
         margin: 3.5% 3% 0%;
         font-size: 1.4rem;
@@ -1000,6 +987,45 @@ font-size: 2rem;
     font-size: 1.1rem;
 
   }
+  .div2 > p {
+   
+   font-size: 1rem;
+  }
+  .div2 > p > a {
+   text-decoration: none;
+   margin: 1% 32%;
+   
+  }
+  .button-2 {
+   margin-left: 3.5rem;
+   height: 2.5rem;
+   width: 13rem;
+   background-color: lightsalmon;
+   font-size: 1rem;
+   border: none;
+   margin-bottom: 3rem;
+  }
+  .button-2 > a {
+   text-decoration: none;
+  }
+  .div2 {
+        background-color: lightseagreen;
+        
+        height: auto;
+        border: 2px transparent;
+        position: absolute;
+        right: 0rem;
+        width: 100%;
+        z-index: 3;
+        
+        border: 2px transparent;
+        display: block;
+        left: -38rem;
+        transition: all .2.5s;
+        
+        
+     }
+ 
  
 }
  @media only screen and (max-width: 380px) {
@@ -1027,9 +1053,17 @@ font-size: 2rem;
     <i onclick="toggleFunction()"  class="icon fa fa-bars"></i>
   </div>
   <div class="div2">
-    <ul>
-      <li></li>
-    </ul>
+    <span onclick="myFunction1()"  id="span-1" style="float: right;color:white;font-size:3rem;font-family:cursive;cursor:pointer;font-weight:bolder;">X</span><br><br><br><br>
+      <p><a href="">Men section</a></p><br>
+  <hr>
+      <p><a href="">Women section</a></p><br>
+      <hr>
+      <p><a href="">Children section</a></p><br>
+      <hr>
+      <p><a href=""> Gallery</a></p><br>
+      <hr>
+      <p><a href="">News</a></p><br><br>
+      <button class="button-2"><a href="">Login</a></button>
             </div>
    
     </div>
@@ -1239,12 +1273,17 @@ if(r.innerHTML == 0) {
 }
 function toggleFunction() {
   let a = document.querySelector(".div2");
-  if (a.style.display === "none") {
-    a.style.display = "block"
+  if (a.style.left == "-38rem") {
+    a.style.left = "0rem"
   } else {
-    a.style.display = "none"
+    a.style.left = "-38rem"
   }
 }
+function myFunction1() {
+  let a = document.querySelector(".div2");
+  a.style.left = "-38rem"
+}
+
    </script>
 </body>
 </html>
