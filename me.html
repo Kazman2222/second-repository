@@ -7,6 +7,21 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <p id="demo"></p>
+   <script>
+    const person = {
+        firstName: "kazeem",
+        lastName: "habeeb",
+        fullName: function() {
+            return this.firstName + " " + this.lastName
+        }
+    }
+    const person1 = {
+        firstName: "kazeem",
+        lastName: "ayomide",
+    }
+    let fullName =  person.fullName.bind(person1)
+    document.getElementById("demo").innerHTML = fullName()
+   </script>
 </body>
 </html>
