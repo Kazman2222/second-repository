@@ -11,20 +11,26 @@
 .header {
     background-color: blueviolet;
     width: 100%;
-    height: 2rem;
+    left: 0;
+    top: 0;
+    position: absolute;
+    margin: 0;
+  padding: 0;
 } 
 .span1 {
     margin: 1% 10%;
+    font-size: 3rem;
 }
 
 @media only screen and (max-width: 600px) {
 .header {
   width: 100%;
-    height: auto;
+    
     background-color: rgb(120, 56, 166);
+    left: 0;
+    top: 0;
     position: absolute;
-   left: 0%;
-   top: 0%;
+  
    display: flex;
    flex-direction: row;
    gap: 15%;
@@ -40,6 +46,7 @@
 .span1 {
     color: aqua;
     margin: 1% 5%;
+    font-size: 1rem;
 }
 .cart-button {
     border-radius: 50%;
@@ -53,31 +60,39 @@
 }
 .table tr, td {
     border: 1px solid darkturquoise ;
-    width: 100%;
+    width: 90%;
+    margin: 1% 5%;
     color: gainsboro;
+    display: none;
 }
 .main {
 
-    width: 100.8%;
+    width: 100%;
     height: auto;
-    margin: 4.1% 1%;
+    
+    left: 0;
+    top: 8%;
     position: absolute;
-   left: -1.5%;
+    height: 20rem;
+    background-color: red;
+
+   
+    
+    
+   
 }
-#tk {
-    text-align: center;
-}
+
 .second-header {
-    background-image: url(vege.jpg);
-    background-repeat: no-repeat;
+   
     border: 2px solid transparent;
-    background-size: cover;
+    background-size: 100%;
     position: absolute;
    left: 0%;
+   width: 100%;
 
 }
 .button-1 {
-    display: flex;
+    display: none;
     flex-direction: row;
     gap: 5%;
     margin: 2% 20%;
@@ -103,54 +118,7 @@
    <button class="cart-button">0</button>
    </div> 
    <div class="main">
-<div class="second-header">
-    <div>
-        <h2 id="tk">WELCOME TO TKFARMS</h2>
-    </div>
-    <div>
-        <table class="table">
-            <caption>List Of Items</caption>
-            <thead>
-                <tr>
-                    <td>NAME</td>
-                    <td>QUANTITY</td>
-                    <td>PRICE</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    
-                    <td>Tomato</td>
-                    <td>1</td>
-                    <td>$250</td>
-                </tr>
-                <tr>
-                    
-                    <td>onions</td>
-                    <td>1</td>
-                    <td>$150</td>
-                </tr>
-                <tr>
-                    
-                    <td>Bitter Leaf</td>
-                    <td>1</td>
-                    <td>$450</td>
-                </tr>
-                <tr>
-                    
-                    <td>Yam</td>
-                    <td>1</td>
-                    <td>$550</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="button-1">
-        <button id="button-1">MEMBERSHIP</button>
-        <button id="button-2">SHOP</button>
-    </div>
-</div>
-   
+
 
 
    </div>
