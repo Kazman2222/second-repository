@@ -35,6 +35,9 @@
    flex-direction: row;
    gap: 10%;
 }
+* {
+    font-family: sans-serif;
+}
 .bar {
     margin: 2% 5% 0% ;
     color: white;
@@ -79,8 +82,35 @@
     
    
 }
-p {
-    display: none;
+#para {
+    color: white;
+    font-size: 1.6rem;
+    text-align: center;
+}
+#button-1 {
+    width: 5rem;
+    height: auto;
+    background-color: lightblue;
+    font-size: 1.5rem;
+    margin: 1% 10%;
+}
+#button-2 {
+    width: 12rem;
+    height: auto;
+    background-color: white;
+    font-size: 1.5rem;
+    border: 2px solid lightblue;
+}
+.buttons {
+    display: flex;
+    flex-direction: row;
+    margin: 15% 0%;
+    
+}
+#para-1 {
+    color: lightgreen;
+    text-align: center;
+    font-size: 1.6rem;
 }
 
 
@@ -95,7 +125,12 @@ p {
    <button class="cart-button">0</button>
    </div> 
    <div class="main">
-<p>hello</p>
+<p id="para">Hello, Welcome to TKFARMS</p>
+<P id="para-1">UP TO 50% DISCOUNTS ON EVERY PURCHASE</P>
+<div class="buttons">
+    <button id="button-1">SHOP</button>
+    <button id="button-2">MEMBERSHIP</button>
+</div>
    
 
 
@@ -103,8 +138,8 @@ p {
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  
    <script>
 $(function(){
-    $("body").load(function(){
-        $("p").css("display", "block")
+    $("body").click(function(){
+        $("#para").fadeIn(1000)
     })
 })
    </script>
