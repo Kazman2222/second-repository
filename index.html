@@ -79,6 +79,9 @@
     
    
 }
+p {
+    display: none;
+}
 
 
 
@@ -92,10 +95,18 @@
    <button class="cart-button">0</button>
    </div> 
    <div class="main">
-
+<p>hello</p>
    
 
 
    </div>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  
+   <script>
+$(function(){
+    $("body").load(function(){
+        $("p").css("display", "block")
+    })
+})
+   </script>
 </body>
 </html>
