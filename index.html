@@ -156,12 +156,12 @@
    width: 8rem;
 }
 .tomato {
-    width: 70%;
+    width: 90.5%;
     background-image: url(tomato.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
     height: 12rem;
-    margin: 0% 15%;
+    margin: 0% 5%;
 }
 .tomato > h4 {
     color: white;
@@ -173,12 +173,12 @@
     color: white;
 }
 .banana {
-    width: 70%;
+    width: 90%;
     background-image: url(bana.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
     height: 11rem;
-    margin: 0% 16.1%;
+    margin: 0% 5.1%;
     
 }
 .banana > h4 {
@@ -188,12 +188,12 @@
     font-size: 2rem;
 }
 .berries {
-    width: 70%;
+    width: 90.5%;
     background-image: url(berries.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
     height: 10rem;
-    margin: 0% 16.1%;
+    margin: 0% 5.1%;
     
     
 }
@@ -204,9 +204,9 @@
     font-size: 2rem;
 }
 .explore {
-    margin: 9% 20% 0%;
+    margin: 9% 0% 0%;
     font-size: 1.3rem;
-    width: 96.2%;
+    width: 90.2%;
     height: 3rem;
     padding-top: 2%;
     padding-left: 3%;
@@ -215,7 +215,15 @@
     border: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border-radius: 2px 2px 2px 2px;
+    position: absolute;
     
+    animation-duration: 1.5s;
+    left: 1.2rem;
+    
+}
+@keyframes turn { 
+   from{left: -30rem}
+    to{left: 1.2rem}
 }
 .explore-button {
     width: 73.5%;
@@ -227,7 +235,7 @@
 
 }
 </style>
-<body>
+<body onscroll="myFunction()">
    <div class="header">
    <i class="bar fa fa-bars"></i>
    <span class="span1">TKFARMS</span>
@@ -274,6 +282,16 @@ $(function(){
         $("#para").fadeIn(1000)
     })
 })
+function myFunction() {
+    let y = document.querySelector(".explore");
+    if(document.documentElement.scrollTop > 530) {
+        y.style.animationName = "turn"
+       
+    }
+    else {
+        y.style.animationName = "turns"
+    }
+}
    </script>
 </body>
 </html>
