@@ -11,18 +11,17 @@
 .header {
     background-color: blueviolet;
     width: 100%;
-    left: 0;
-    top: 0;
-    position: absolute;
-    margin: 0;
-  padding: 0;
+   position: absolute;
+   left: 0;
+   top: 0;
+
+
 } 
 .span1 {
     margin: 1% 10%;
     font-size: 3rem;
 }
-
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 480px) {
 .header {
   width: 100%;
     
@@ -38,20 +37,26 @@
     font-family: sans-serif;
 }
 .bar {
-    margin: 1% 1% ;
+    margin: 1% 1.2% ;
     color: white;
     font-size: 1.5rem;
 }
 .carts {
-    margin: 1% 4.5%;
+    margin: 1% 2.5%;
+    margin-left: 3%;
     border: 2px solid none;
+    float: right;
     width: 100%;
     color: white;
     font-size: 1.5rem;
 }
 .span1 {
     color: orange;
-    margin: 0.5% 8% 1%;
+    
+    margin-top: 0.5%;
+    margin-bottom: 1%;
+    margin-left: 4.4%;
+    margin-right: 2%;
     font-size: 1.4rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
@@ -69,143 +74,7 @@
     display: none;
 }
 
-.main {
 
-    width: 100%;
-    height: auto;
-    
-    left: 0;
-    margin: 6.8% 0%;
-    position: absolute;
-    height: 20rem;
-    background-image: url(vegee.jpg);
-   background-repeat: no-repeat;
-   background-size: 110%;
-   
-    
-    
-   
-}
-#para {
-    color: white;
-    font-size: 1.6rem;
-    text-align: center;
-    margin-top: 10%;
-}
-#button-1 {
-    width: 7rem;
-    height: auto;
-    background-color: lightblue;
-    border: none;
-    font-size: 1.5rem;
-    margin: 1% 7%;
-    border-radius: 5px 5px 5px 5px;
-    color: white;
-}
-#button-2 {
-    border-radius: 5px 5px 5px 5px;
-    width: 12rem;
-    height: auto;
-    background-color: white;
-    font-size: 1.5rem;
-    border: 2px solid lightblue;
-    color: black;
-}
-.buttons {
-    display: flex;
-    flex-direction: row;
-    margin: 14% 5%;
-    gap: 0%;
-    
-}
-#para-1 {
-    color: mintcream;
-    text-align: center;
-    margin-top: 8%;
-    font-size: 1.6rem;
-}
-.div2 {
- display: flex;  
- flex-direction: row;
- gap: 2%;
- width: 100%;
- margin: 0% 0%;
-}
-.div2 > hr {
-    color: red;
-    size: 5px;
-    
-}
-.hr {
-    border: 2px solid black;
-    width: 5rem;
-    height: 2rem;
-    border-top-style: none;
-    border-right-style: none;
-    border-left-style: none;
-    margin: 0% 10%;
-}
-.hrr {
-    border: 2px solid black;
-    width: 5rem;
-    height: 2rem;
-    border-top-style: none;
-    border-right-style: none;
-    border-left-style: none;
-    margin: 0% 12%;
-}
-.h4-div {
-   margin-left: 5%;
-   width: 8rem;
-}
-.tomato {
-    width: 90.5%;
-    background-image: url(tomato.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    height: 12rem;
-    margin: 0% 5%;
-}
-.tomato > h4 {
-    color: white;
-    text-align: center;
-    padding-top: 28.5%;
-    font-size: 2rem;
-}
-.toma {
-    color: white;
-}
-.banana {
-    width: 90%;
-    background-image: url(bana.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    height: 11rem;
-    margin: 0% 5.1%;
-    
-}
-.banana > h4 {
-    color: white;
-    text-align: center;
-    padding-top: 28.5%;
-    font-size: 2rem;
-}
-.berries {
-    width: 90.5%;
-    background-image: url(berries.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    height: 10rem;
-    margin: 0% 5.1%;
-    
-    
-}
-.berries > h4 {
-    color: white;
-    text-align: center;
-    padding-top: 28.5%;
-    font-size: 2rem;
-}
 .explore {
     margin: 9% 0% 0%;
     font-size: 1.3rem;
@@ -236,26 +105,65 @@
     margin: 1% 1%;
     display: flex;
     flex-direction: row;
-    gap: 15%;
+    gap: 1%;
+
     border: 2px solid none;
-    width: 98%;
+    
+}
+.img-back {
+    background-image: url(vegee.jpg);
+    width: 100%;
+    height: 50%;
+    background-size: 100%;
+    position: absolute;
+    left: 0;
+    top: 44px;
+    
+
+}
+.img-back > h4 {
+    color: white;
+    margin: 4% 25.5%;
+    font-size: 1.3rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: none;
+}
+.inp {
+    width: 150%;
+    margin: 0.5% 0%;
+    height: 1.5rem;
+    padding-left: 2%;
+    
+
 }
 
 
 
 
 }
+
+
 </style>
 <body onscroll="myFunction()">
    <div class="header">
     <div class="headers">
-   <i class="bar fa fa-bars"></i>
-   <span class="span1">TKFARMS</span>
-   <i class="carts fa fa-shopping-cart"></i>
+      
+        
+   
+   
+        <i class="bar fa fa-bars"></i>
+        <span class="span1">TKFARMS</span>
+   
+   <input type="text" class="inp" placeholder="search for items...">
+   
+  
    <button class="cart-button">0</button>
    </div>
 
    </div> 
+   <div class="img-back">
+<h4>Welcome to TKFARMS</h4>
+   </div>
   
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  
    <script>
