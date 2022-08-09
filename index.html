@@ -149,6 +149,66 @@ width: 92%;
     margin: 4% 30%;
     text-align: center;
 }
+.div-1 > button {
+    position: absolute;
+    right: 1.5rem;
+    top: 7px;
+    border-radius: 50%;
+    border: none;
+    background-color: crimson;
+    color: white;
+    
+}
+.cart-div {
+    width: 90%;
+    height: 30rem;
+    position: absolute;
+    top: 50px;
+    display: none;
+}
+.h2 {
+    text-align: center;
+}
+.tomato-div {
+    display: none;
+    position: absolute;
+    top: 30px;
+}
+.quantity {
+    display: flex;
+    flex-direction: row;
+    margin: 1.5% 0.5%;
+}
+.img-tom {
+    display: flex;
+    flex-direction: column;
+}
+.img-tom > h5 {
+    
+    font-size: 1.5rem;
+}
+.mySt {
+    display: none;
+}
+.button-tom {
+    font-size: 17px;
+    width: 15rem;
+    height: 2rem;
+    border-radius: 2px 2px 2px 2px;
+    border: none;
+    background-color: rgb(226, 152, 152);
+    margin-left: 2%;
+    margin-bottom: 1%;
+}
+.input-1 {
+    width: 10rem;
+    height: 2rem;
+    margin: 0% 0.1%;
+    border: 2px solid black;
+    border-radius: 2px 2px 2px 2px;
+    
+}
+
 
 
           }
@@ -158,7 +218,8 @@ width: 92%;
     <div class="div-1">
         <i class="icon fa fa-bars"></i>
          <span>Tobi's Store</span>
-         <i class="icons fa fa-shopping-cart"></i>
+         <i class="icons fa fa-shopping-cart" onclick="hideFunction()"></i>
+         <button id="button-11">0</button>
     </div>
    <div class="div-2">
 <h5>Natural Foods</h5>
@@ -173,24 +234,92 @@ width: 92%;
     <img src="tomato.jpg" alt="">
     <span>vegetables</span>
     <br>
-    <button id="buttons-1" ><i class="icon-1 fa fa-shopping-cart"></i></button>
-    <button>view in store</button>
+    <button onclick="myFunction()" id="buttons-1" ><i class="icon-1 fa fa-shopping-cart"></i></button>
+    <button id="button-veg">view in store</button>
 </div>
 <div class="img-2">
     <img src="bana.jpg" alt="">
     <span>Fruits</span>
     <br>
-    <button id="buttons-1" ><i class="icon-1 fa fa-shopping-cart"></i></button>
-    <button>view in store</button>
+    <button onclick="myFunction()" id="buttons-1" ><i class="icon-1 fa fa-shopping-cart"></i></button>
+    <button id="button-fru">view in store</button>
 </div>
 <div class="img-3">
     <img src="berries.jpg" alt="">
     <span>Berries</span>
     <br>
-    <button id="buttons-1" ><i class="icon-1 fa fa-shopping-cart"></i></button>
-    <button>view in store</button>
+    <button onclick="myFunction()" id="buttons-1" ><i class="icon-1 fa fa-shopping-cart"></i></button>
+    <button id="button-ber">view in store</button>
 </div>
     </div>
   </div>
+  <div class="cart-div">
+    <h2 class="h2">YOUR CART IS EMPTY PLEASE ADD TO YOUR CART</h2>
+  </div>
+  <div class="tomato-div">
+    <div class="img-tom">
+<img src="tomato.jpg" alt="">
+<h5>FRESH TOMATO</h5>
+    </div>
+    <div class="quantity">
+    <p>250 * <span class="spans"></span></p>
+    <input type="number" id="input-1" oninput="calFunction()">
+    <p>= <del>N</del><span class="span-3"></span></p>
+    </div>
+    <button onclick="remTom(event)" class="button-tom">Remove from the cart item</button>
+
+  </div>
+  <script>
+   var d = 0
+   function myFunction() {
+    let a = document.querySelector("#button-11")
+    let c = document.querySelector(".cart-div")
+    let g = document.querySelector(".tomato-div")
+    let o = document.querySelector(".h2")
+    o.innerHTML = "YOUR CARTS ITEM"
+    d++
+    a.innerHTML = d
+    c.innerHTML += g.innerHTML
+    
+
+   }
+   function hideFunction() {
+    let a = document.querySelector(".div-2")
+    let b = document.querySelector(".div-3")
+    let o = document.querySelector(".h2")
+    let c = document.querySelector(".cart-div")
+    let g = document.querySelector(".tomato-div")
+    a.style.display = "none"
+    b.style.display = "none"
+    c.style.display = "block"
+   
+   
+    
+    
+   
+    
+}
+function calFunction() {
+    let a = document.querySelector("#input-1")
+    let b = document.querySelector(".span-3")
+    b.innerHTML = 250 * Number(a.value)
+}
+function remTom() {
+    let b = document.querySelector(".button-tom")
+    let q = document.querySelector("#buttons-1")
+    let g = document.querySelector(".quantity")
+    let p = document.querySelector(".img-tom")
+    let o = document.querySelector(".h2")
+    let c = document.querySelector(".cart-div")
+    if(event.target == b) {
+      g.style.display = "none"
+      p.style.display = "none"
+      b.style.display = "none"
+       o.innerHTML = "YOUR CART IS EMPTY PLEASE ADD TO YOUR CART"
+       q.innerHTML = 0
+    }
+}
+  </script>
+
 </body>
 </html>
