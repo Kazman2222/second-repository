@@ -151,9 +151,9 @@ width: 92%;
 }
 .div-1 > button {
     position: absolute;
-    right: 1.5rem;
+    right: 1.1rem;
     top: 7px;
-    border-radius: 50%;
+    border-radius: 40%;
     border: none;
     background-color: crimson;
     color: white;
@@ -208,6 +208,18 @@ width: 92%;
     border-radius: 2px 2px 2px 2px;
     
 }
+.cart-div > button {
+    font-size: 15px;
+    width: 13rem;
+    height: 2rem;
+    border-radius: 2px 2px 2px 2px;
+    border: none;
+    background-color: black;
+    color: white;
+ margin-top: 3%;
+ margin-left: 25.5%;
+ margin-right: 10%;
+}
 
 
 
@@ -255,6 +267,8 @@ width: 92%;
   </div>
   <div class="cart-div">
     <h2 class="h2">YOUR CART IS EMPTY PLEASE ADD TO YOUR CART</h2>
+    <div class="carts-div"></div>
+    <button onclick="cloFunction()">Back To Home Page</button>
   </div>
   <div class="tomato-div">
     <div class="img-tom">
@@ -273,16 +287,20 @@ width: 92%;
    var d = 0
    function myFunction() {
     let a = document.querySelector("#button-11")
-    let c = document.querySelector(".cart-div")
+    let m = document.querySelector("#buttons-1")
+    let c = document.querySelector(".carts-div")
     let g = document.querySelector(".tomato-div")
     let o = document.querySelector(".h2")
     o.innerHTML = "YOUR CARTS ITEM"
     d++
     a.innerHTML = d
-    c.innerHTML += g.innerHTML
+  
     
-
-   }
+c.innerHTML += g.innerHTML
+m.removeAttribute("onclick", "myFunction()")
+   } 
+   
+   
    function hideFunction() {
     let a = document.querySelector(".div-2")
     let b = document.querySelector(".div-3")
@@ -306,18 +324,50 @@ function calFunction() {
 }
 function remTom() {
     let b = document.querySelector(".button-tom")
+    let a = document.querySelector("#input-1")
     let q = document.querySelector("#buttons-1")
     let g = document.querySelector(".quantity")
     let p = document.querySelector(".img-tom")
     let o = document.querySelector(".h2")
-    let c = document.querySelector(".cart-div")
+    let c = document.querySelector("#button-11")
+
+    q.setAttribute("onclick", "comFunction()")
+    a.setAttribute("onclick", "calFunction()")
     if(event.target == b) {
       g.style.display = "none"
       p.style.display = "none"
       b.style.display = "none"
        o.innerHTML = "YOUR CART IS EMPTY PLEASE ADD TO YOUR CART"
-       q.innerHTML = 0
+       d--
+       c.innerHTML = d
+       
+
+      
     }
+}
+function cloFunction() {
+    let a = document.querySelector(".div-2")
+    let b = document.querySelector(".div-3")
+    let o = document.querySelector(".h2")
+    let c = document.querySelector(".cart-div")
+    let g = document.querySelector(".tomato-div")
+    a.style.display = "block"
+    b.style.display = "block"
+    c.style.display = "none" 
+}
+function comFunction() {
+    let b = document.querySelector(".button-tom")
+    let a = document.querySelector("#input-1")
+    let q = document.querySelector("#buttons-1")
+    let g = document.querySelector(".quantity")
+    let p = document.querySelector(".img-tom")
+    let z = document.querySelector("#button-11")
+    g.style.display = "inherit"
+      p.style.display = "inherit"
+      b.style.display = "inherit"
+      d++
+      z.innerHTML = d
+
 }
   </script>
 
