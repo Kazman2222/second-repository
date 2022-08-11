@@ -210,6 +210,11 @@ width: 92%;
     flex-direction: row;
     margin: 1.5% 0.5%;
 }
+.quantitiess {
+    display: flex;
+    flex-direction: row;
+    margin: 1.5% 0.5%;
+}
 .img-tom {
     display: flex;
     flex-direction: column;
@@ -232,11 +237,20 @@ width: 92%;
     border: none;
     background-color: rgb(226, 152, 152);
     margin-left: 2%;
-    margin-bottom: 1%;
+    margin-bottom: 2%;
+    color: white;
 }
 .input-1 {
-    width: 10rem;
-    height: 2rem;
+    width: 5rem;
+    height: 1rem;
+    margin: 0% 0.1%;
+    border: 2px solid black;
+    border-radius: 2px 2px 2px 2px;
+    
+}
+.input-3 {
+    width: 5rem;
+    height: 1rem;
     margin: 0% 0.1%;
     border: 2px solid black;
     border-radius: 2px 2px 2px 2px;
@@ -255,6 +269,11 @@ width: 92%;
  margin-right: 10%;
 }
 .apple-div {
+    display: none;
+    position: absolute;
+    top: 30px;
+}
+.ber-div {
     display: none;
     position: absolute;
     top: 30px;
@@ -283,6 +302,24 @@ width: 92%;
 }
 .icon-1 {
     font-size: 1.5rem;
+}
+.img-ber > h5 {
+    
+    font-size: 1.5rem;
+}
+.img-ber > img {
+    width: 70%;
+}
+.button-ber {
+    font-size: 17px;
+    width: 15rem;
+    height: 2rem;
+    border-radius: 2px 2px 2px 2px;
+    border: none;
+    background-color: rgb(226, 152, 152);
+    margin-left: 2%;
+    margin-bottom: 1%;
+    color: white;
 }
 
 
@@ -324,7 +361,7 @@ width: 92%;
     <img src="berries.jpg" alt="">
     <span>Berries</span>
     <br>
-    <button  class="buttons-3" ><i class="icon-1 fa fa-shopping-cart"></i></button>
+    <button onclick="berFunction()"  class="buttons-3" ><i class="icon-1 fa fa-shopping-cart"></i></button>
     <button id="button-ber">view in store</button>
 </div>
     </div>
@@ -358,6 +395,19 @@ width: 92%;
     <p><span id="span-13">quantity</span>  = <del>N</del><span class="span-4"></span></p>
     </div>
     <button onclick="remApple(event)" class="button-app">Remove from the cart item</button>
+
+  </div>
+  <div class="ber-div">
+    <div class="img-ber">
+<img src="berries.jpg" alt="">
+<h5>FRESH BERRIES</h5>
+    </div>
+    <div class="quantitiess">
+    <p>1000 * <span class="spans"></span></p>
+    <input type="number" id="input-3" oninput="calssFunction()">
+    <p><span id="span-15">quantity</span>  = <del>N</del><span class="span-5"></span></p>
+    </div>
+    <button onclick="remBer(event)" class="button-ber">Remove from the cart item</button>
 
   </div>
   <script>
@@ -412,6 +462,21 @@ m.removeAttribute("onclick", "myFunction()")
 c.innerHTML += g.innerHTML
 m.removeAttribute("onclick", "appFunction()")
    } 
+   function berFunction() {
+    let a = document.querySelector("#button-11")
+    let m = document.querySelector(".buttons-3")
+    let c = document.querySelector(".carts-div")
+    let g = document.querySelector(".ber-div")
+    let o = document.querySelector(".h2")
+    o.innerHTML = "YOUR CARTS ITEM"
+    d++
+    a.innerHTML = d
+    
+  
+    
+c.innerHTML += g.innerHTML
+m.removeAttribute("onclick", "berFunction()")
+   } 
    
    
    function hideFunction() {
@@ -446,6 +511,18 @@ function calsFunction() {
     let a = document.querySelector("#input-2")
     let b = document.querySelector(".span-4")
     let v = document.querySelector("#span-13")
+    b.innerHTML = 250 * Number(a.value)
+    if(a.value > 1) {
+        v.innerHTML = "quantities"
+    }
+    if(a.value < 1) {
+        v.innerHTML = "quantity"
+    }
+}
+function calssFunction() {
+    let a = document.querySelector("#input-3")
+    let b = document.querySelector(".span-5")
+    let v = document.querySelector("#span-15")
     b.innerHTML = 250 * Number(a.value)
     if(a.value > 1) {
         v.innerHTML = "quantities"
@@ -507,6 +584,28 @@ function remApple() {
 }
 
 }
+function remBer() {
+    let b = document.querySelector(".button-ber")
+    let a = document.querySelector("#input-1")
+    let q = document.querySelector(".buttons-3")
+    let g = document.querySelector(".quantitiess")
+    let p = document.querySelector(".img-ber")
+    let o = document.querySelector(".h2")
+    let c = document.querySelector("#button-11")
+
+    q.setAttribute("onclick", "comssFunction()")
+    a.setAttribute("onclick", "calFunction()")
+    if(event.target == b) {
+      g.style.display = "none"
+      p.style.display = "none"
+      b.style.display = "none"
+      
+       d--
+       c.innerHTML = d
+     
+}
+
+}
 function cloFunction() {
     let a = document.querySelector(".div-2")
     let b = document.querySelector(".div-3")
@@ -552,6 +651,24 @@ function comsFunction() {
       d++
       z.innerHTML = d
       q.removeAttribute("onclick", "comsFunction()")
+      
+
+}
+function comssFunction() {
+    let b = document.querySelector(".button-ber")
+    let a = document.querySelector("#input-1")
+    let q = document.querySelector(".buttons-3")
+    let g = document.querySelector(".quantitiess")
+    let p = document.querySelector(".img-ber")
+    let z = document.querySelector("#button-11")
+    let o = document.querySelector(".h2")
+    g.style.display = "flex"
+      p.style.display = "inline"
+      b.style.display = "inline"
+      o.innerHTML = "YOUR CARTS ITEM"
+      d++
+      z.innerHTML = d
+      q.removeAttribute("onclick", "comssFunction()")
       
 
 }
