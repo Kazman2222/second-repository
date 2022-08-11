@@ -52,10 +52,14 @@
     font-size: 1.5rem;
 }
 .div-2 > h5 {
-    color: white;
+color: rgb(5, 255, 255);
+font-weight: bold;
+
 }
 .div-2 > h2 {
-    color: orangered;
+    color: mintcream;
+    font-weight: bold;
+    
 }
 .button-1 {
     width: 10rem;
@@ -96,7 +100,7 @@ width: 92%;
     margin: 1% 2%;
 
 }
-#buttons-1 {
+.buttons-1 {
     width: 3rem;
     height: 2.5rem;
     margin-left: 12.5%;
@@ -106,7 +110,27 @@ width: 92%;
     border: none;
     border-radius: 2px 2px 2px 2px;
 }
-.img-1 > button {
+.buttons-2 {
+    width: 3rem;
+    height: 2.5rem;
+    margin-left: 12.5%;
+    margin-top: 2.1;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 2px 2px 2px 2px;
+}
+.buttons-3 {
+    width: 3rem;
+    height: 2.5rem;
+    margin-left: 12.5%;
+    margin-top: 2.1;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 2px 2px 2px 2px;
+}
+#button-veg {
     width: 9rem;
     height: 3rem;
     font-size: 1.1rem;
@@ -120,7 +144,7 @@ width: 92%;
     font-size: 2.5rem;
     margin: 4% 25%;
 }
-.img-2 > button {
+#button-fru {
     width: 9rem;
     height: 3rem;
     font-size: 1.1rem;
@@ -134,7 +158,7 @@ width: 92%;
     font-size: 2.5rem;
     margin: 4% 33%;
 }
-.img-3 > button {
+#button-ber {
     width: 9rem;
     height: 3rem;
     font-size: 1.1rem;
@@ -153,7 +177,9 @@ width: 92%;
     position: absolute;
     right: 1.1rem;
     top: 7px;
-    border-radius: 40%;
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
     border: none;
     background-color: crimson;
     color: white;
@@ -179,9 +205,17 @@ width: 92%;
     flex-direction: row;
     margin: 1.5% 0.5%;
 }
+.quantities {
+    display: flex;
+    flex-direction: row;
+    margin: 1.5% 0.5%;
+}
 .img-tom {
     display: flex;
     flex-direction: column;
+}
+.img-tom > img {
+    width: 70%;
 }
 .img-tom > h5 {
     
@@ -220,6 +254,33 @@ width: 92%;
  margin-left: 25.5%;
  margin-right: 10%;
 }
+.apple-div {
+    display: none;
+    position: absolute;
+    top: 30px;
+}
+.app-tom {
+    display: flex;
+    flex-direction: column;
+}
+.img-app > h5 {
+    
+    font-size: 1.5rem;
+}
+.img-app > img {
+    width: 70%;
+}
+.button-app {
+    font-size: 17px;
+    width: 15rem;
+    height: 2rem;
+    border-radius: 2px 2px 2px 2px;
+    border: none;
+    background-color: rgb(226, 152, 152);
+    margin-left: 2%;
+    margin-bottom: 1%;
+    color: white;
+}
 
 
 
@@ -246,21 +307,21 @@ width: 92%;
     <img src="tomato.jpg" alt="">
     <span>vegetables</span>
     <br>
-    <button onclick="myFunction()" id="buttons-1" ><i class="icon-1 fa fa-shopping-cart"></i></button>
+    <button onclick="myFunction()"  class="buttons-1" ><i    class="icon-1 fa fa-shopping-cart"></i></button>
     <button id="button-veg">view in store</button>
 </div>
 <div class="img-2">
     <img src="bana.jpg" alt="">
     <span>Fruits</span>
     <br>
-    <button onclick="myFunction()" id="buttons-1" ><i class="icon-1 fa fa-shopping-cart"></i></button>
-    <button id="button-fru">view in store</button>
+    <button onclick="appFunction()"  class="buttons-2" ><i class="icon-1 fa fa-shopping-cart"></i></button>
+    <button onclick="setFunction()" id="button-fru">view in store</button>
 </div>
 <div class="img-3">
     <img src="berries.jpg" alt="">
     <span>Berries</span>
     <br>
-    <button onclick="myFunction()" id="buttons-1" ><i class="icon-1 fa fa-shopping-cart"></i></button>
+    <button  class="buttons-3" ><i class="icon-1 fa fa-shopping-cart"></i></button>
     <button id="button-ber">view in store</button>
 </div>
     </div>
@@ -277,27 +338,76 @@ width: 92%;
     </div>
     <div class="quantity">
     <p>250 * <span class="spans"></span></p>
-    <input type="number" id="input-1" oninput="calFunction()">
-    <p>= <del>N</del><span class="span-3"></span></p>
+    <input type="number" id="input-1" oninput="calFunction()" >
+    <p><span id="span-11">quantity</span>  = <del>N</del><span class="span-3"></span></p>
     </div>
     <button onclick="remTom(event)" class="button-tom">Remove from the cart item</button>
 
   </div>
+  <div class="apple-div">
+    <div class="img-app">
+<img src="bana.jpg" alt="">
+<h5>FRESH BANANA</h5>
+    </div>
+    <div class="quantities">
+    <p>1000 * <span class="spans"></span></p>
+    <input type="number" id="input-2" oninput="calsFunction()">
+    <p><span id="span-13">quantity</span>  = <del>N</del><span class="span-4"></span></p>
+    </div>
+    <button onclick="remApple(event)" class="button-app">Remove from the cart item</button>
+
+  </div>
   <script>
    var d = 0
+   setInterval(setFunction, 100)
+  
    function myFunction() {
+    
     let a = document.querySelector("#button-11")
-    let m = document.querySelector("#buttons-1")
+    let m = document.querySelector(".buttons-1")
     let c = document.querySelector(".carts-div")
     let g = document.querySelector(".tomato-div")
     let o = document.querySelector(".h2")
     o.innerHTML = "YOUR CARTS ITEM"
     d++
     a.innerHTML = d
+ 
+    
+c.innerHTML += g.innerHTML
+
+m.removeAttribute("onclick", "myFunction()")
+
+}
+
+
+
+
+
+   
+   
+   function setFunction() {
+    let a = document.querySelector("#button-11")
+    let o = document.querySelector(".h2")
+    if(d == 0) {
+        o.innerHTML = "YOUR CART IS EMPTY PLEASE ADD TO YOUR CART"
+    }
+
+   
+   }
+   function appFunction() {
+    let a = document.querySelector("#button-11")
+    let m = document.querySelector(".buttons-2")
+    let c = document.querySelector(".carts-div")
+    let g = document.querySelector(".apple-div")
+    let o = document.querySelector(".h2")
+    o.innerHTML = "YOUR CARTS ITEM"
+    d++
+    a.innerHTML = d
+    
   
     
 c.innerHTML += g.innerHTML
-m.removeAttribute("onclick", "myFunction()")
+m.removeAttribute("onclick", "appFunction()")
    } 
    
    
@@ -320,30 +430,79 @@ m.removeAttribute("onclick", "myFunction()")
 function calFunction() {
     let a = document.querySelector("#input-1")
     let b = document.querySelector(".span-3")
+    let v = document.querySelector("#span-11")
     b.innerHTML = 250 * Number(a.value)
+    if(a.value > 1) {
+        v.innerHTML = "quantities"
+    }
+    if(a.value < 1) {
+        v.innerHTML = "quantity"
+    }
+}
+function calsFunction() {
+    let a = document.querySelector("#input-2")
+    let b = document.querySelector(".span-4")
+    let v = document.querySelector("#span-13")
+    b.innerHTML = 250 * Number(a.value)
+    if(a.value > 1) {
+        v.innerHTML = "quantities"
+    }
+    if(a.value < 1) {
+        v.innerHTML = "quantity"
+    }
+}
+function remFocus() {
+    let a = document.querySelector("#input-1")
+    a.blur()
 }
 function remTom() {
     let b = document.querySelector(".button-tom")
     let a = document.querySelector("#input-1")
-    let q = document.querySelector("#buttons-1")
+    let q = document.querySelector(".buttons-1")
     let g = document.querySelector(".quantity")
     let p = document.querySelector(".img-tom")
     let o = document.querySelector(".h2")
     let c = document.querySelector("#button-11")
 
-    q.setAttribute("onclick", "comFunction()")
+    
+  q.setAttribute("onclick", "comFunction()")
+    
     a.setAttribute("onclick", "calFunction()")
     if(event.target == b) {
       g.style.display = "none"
       p.style.display = "none"
       b.style.display = "none"
-       o.innerHTML = "YOUR CART IS EMPTY PLEASE ADD TO YOUR CART"
+      
        d--
-       c.innerHTML = d
+       c.innerHTML = d 
+       
+       
        
 
       
     }
+}
+function remApple() {
+    let b = document.querySelector(".button-app")
+    let a = document.querySelector("#input-1")
+    let q = document.querySelector(".buttons-2")
+    let g = document.querySelector(".quantities")
+    let p = document.querySelector(".img-app")
+    let o = document.querySelector(".h2")
+    let c = document.querySelector("#button-11")
+
+    q.setAttribute("onclick", "comsFunction()")
+    a.setAttribute("onclick", "calFunction()")
+    if(event.target == b) {
+      g.style.display = "none"
+      p.style.display = "none"
+      b.style.display = "none"
+      
+       d--
+       c.innerHTML = d
+     
+}
+
 }
 function cloFunction() {
     let a = document.querySelector(".div-2")
@@ -358,15 +517,39 @@ function cloFunction() {
 function comFunction() {
     let b = document.querySelector(".button-tom")
     let a = document.querySelector("#input-1")
-    let q = document.querySelector("#buttons-1")
+    let q = document.querySelector(".buttons-1")
     let g = document.querySelector(".quantity")
     let p = document.querySelector(".img-tom")
     let z = document.querySelector("#button-11")
-    g.style.display = "inherit"
-      p.style.display = "inherit"
-      b.style.display = "inherit"
+    let o = document.querySelector(".h2")
+    g.style.display = "flex"
+      p.style.display = "inline"
+      b.style.display = "inline"
+      o.innerHTML = "YOUR CARTS ITEM"
       d++
       z.innerHTML = d
+      q.removeAttribute("onclick", "comFunction()")
+      
+      
+      
+
+}
+function comsFunction() {
+    let b = document.querySelector(".button-app")
+    let a = document.querySelector("#input-1")
+    let q = document.querySelector(".buttons-2")
+    let g = document.querySelector(".quantities")
+    let p = document.querySelector(".img-app")
+    let z = document.querySelector("#button-11")
+    let o = document.querySelector(".h2")
+    g.style.display = "flex"
+      p.style.display = "inline"
+      b.style.display = "inline"
+      o.innerHTML = "YOUR CARTS ITEM"
+      d++
+      z.innerHTML = d
+      q.removeAttribute("onclick", "comsFunction()")
+      
 
 }
   </script>
