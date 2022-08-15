@@ -321,6 +321,25 @@ width: 92%;
     margin-bottom: 1%;
     color: white;
 }
+.check-out {
+    display: none;
+    position: absolute;
+    top: 30px;
+}
+.check-out {
+    display: none;
+    position: absolute;
+    top: 30px;
+}
+#list-check {
+display: none;
+}
+#list-checks {
+display: none;
+}
+#list-checkss {
+display: none;
+}
 
 
 
@@ -369,6 +388,8 @@ width: 92%;
   <div class="cart-div">
     <h2 class="h2">YOUR CART IS EMPTY PLEASE ADD TO YOUR CART</h2>
     <div class="carts-div"></div>
+    <div id="check-out"></div>
+    <button id="button-check">Check-out</button>
     <button onclick="cloFunction()">Back To Home Page</button>
   </div>
   <div class="tomato-div">
@@ -379,7 +400,7 @@ width: 92%;
     <div class="quantity">
     <p>250 * <span class="spans"></span></p>
     <input type="number" id="input-1" oninput="calFunction()" >
-    <p><span id="span-11">quantity</span>  = <del>N</del><span class="span-3"></span></p>
+    <p class="quan"><span id="span-11">quantity</span>  = <del>N</del><span class="span-3"></span></p>
     </div>
     <button onclick="remTom(event)" class="button-tom">Remove from the cart item</button>
 
@@ -410,9 +431,22 @@ width: 92%;
     <button onclick="remBer(event)" class="button-ber">Remove from the cart item</button>
 
   </div>
+  <div class="check-out">
+    <p>Number Of Items <span class="check-span"></span></p>
+    <ul>
+<li id="list-check">FRESH TOMATO =<span id="span-tom"></span><strong id="check-strong"></strong> = <strong id="checks-strong"></strong></li>
+ <li id="list-checks">FRESH FRUITS =<span id="span-fru"></span><strong id="check-strongs"></strong> = <strong id="checks-strongs"></strong></li>
+ <li id="list-checkss" ><span></span><strong id="check-strongs"></strong> = <strong id="checks-strongss"></strong></li>
+    </ul>
+    <button>CHECKOUT(<span id="click-span"></span>)</button>
+  </div>
   <script>
    var d = 0
+ let y =  setInterval(checkFunction, 100)
    setInterval(setFunction, 100)
+   setInterval(numFunction, 100)
+  
+   
   
    function myFunction() {
     
@@ -421,29 +455,82 @@ width: 92%;
     let c = document.querySelector(".carts-div")
     let g = document.querySelector(".tomato-div")
     let o = document.querySelector(".h2")
+    let v = document.querySelector("#list-check")
+    let u = document.querySelector("#span-tom")
+    let n = document.querySelector("#input-1")
+    let l = document.querySelector("#check-strong")
     o.innerHTML = "YOUR CARTS ITEM"
     d++
     a.innerHTML = d
  
     
 c.innerHTML += g.innerHTML
+v.style.display = "block"
+//v.innerHTML = "FRESH TOMATO ="
+u.innerHTML = 250 + " " + "*" + " "
 
 m.removeAttribute("onclick", "myFunction()")
+
+
+
+}
+function numFunction() {
+    let v = document.querySelector(".check-span")
+    let a = document.querySelector("#button-11")
+    let b = document.querySelector(".check-out")
+    let c = document.querySelector("#check-out")
+    v.innerHTML = d
+    if(d == 0) {
+        c.style.display = "none"
+    }
+    if(d == 1 || d > 1) {
+        c.style.display = "block"
+    }
+   
+  
 
 }
 
 
 
+function checkFunction() {
+    
+    let a = document.querySelector("#button-11")
+    let p = document.querySelector("#button-check")
+    let o = document.querySelector(".h2")
+    let b = document.querySelector(".check-out")
+    let v = document.querySelector(".check-span")
+    let c = document.querySelector("#check-out")
+    if(d == 1 || d > 1) {
+        c.style.display = "block"
+c.innerHTML += b.innerHTML
+clearInterval(y)
 
+
+
+
+
+    }
+    else {
+       // p.setAttribute("onclick", "checkFunction()")
+        //b.style.display = 'none'
+    }
+   
+    
+    
+}
 
    
    
    function setFunction() {
     let a = document.querySelector("#button-11")
     let o = document.querySelector(".h2")
+    let b = document.querySelector(".check-out")
+    let c = document.querySelector(".carts-div")
     if(d == 0) {
         o.innerHTML = "YOUR CART IS EMPTY PLEASE ADD TO YOUR CART"
     }
+    
 
    
    }
@@ -461,6 +548,7 @@ m.removeAttribute("onclick", "myFunction()")
     
 c.innerHTML += g.innerHTML
 m.removeAttribute("onclick", "appFunction()")
+
    } 
    function berFunction() {
     let a = document.querySelector("#button-11")
@@ -476,6 +564,7 @@ m.removeAttribute("onclick", "appFunction()")
     
 c.innerHTML += g.innerHTML
 m.removeAttribute("onclick", "berFunction()")
+
    } 
    
    
@@ -499,7 +588,11 @@ function calFunction() {
     let a = document.querySelector("#input-1")
     let b = document.querySelector(".span-3")
     let v = document.querySelector("#span-11")
+    let l = document.querySelector("#check-strong")
+    let x = document.querySelector("#checks-strong")
     b.innerHTML = 250 * Number(a.value)
+    l.innerHTML = a.value + " " + v.innerHTML
+    x.innerHTML = "<del>N</del>" + b.innerHTML
     if(a.value > 1) {
         v.innerHTML = "quantities"
     }
