@@ -264,8 +264,8 @@ width: 92%;
     border: none;
     background-color: black;
     color: white;
- margin-top: 3%;
- margin-left: 25.5%;
+ margin-top: 75%;
+ margin-left: 24.6%;
  margin-right: 10%;
 }
 .apple-div {
@@ -325,20 +325,59 @@ width: 92%;
     display: none;
     position: absolute;
     top: 30px;
+    background-color: red;
+    width: 100%;
+    height: 300px;
+    border: 2px solid black;
 }
-.check-out {
-    display: none;
+#check-out {
+    background-color: rgb(188, 188, 77);
+    width: 111%;
     position: absolute;
-    top: 30px;
+    left: -0.5rem;
+    margin: 5% 0%;
 }
+#check-out > p {
+    color: black;
+    text-align: center;
+    font-size: 1.2rem;
+}
+.check-out > ul {
+    list-style-type: circle;
+    margin-left: 1%;
+}
+
 #list-check {
 display: none;
+color: black;
+margin-left: -7%;
+margin-right: 5%;
+
 }
 #list-checks {
 display: none;
+color: black;
+margin-left: -7%;
+margin-right: 5%;
 }
 #list-checkss {
 display: none;
+color: black;
+margin-left: -7%;
+margin-right: 5%;
+}
+#check-out > button {
+    border-radius: 2px 2px 2px 2px;
+    background-color: lime;
+    color: white;
+   margin-left: 25%;
+   margin-right: 10%;
+   margin-top: 4%;
+   margin-bottom: 2%;
+    border: none;
+    width: 11rem;
+    height: 2rem;
+    font-size: 1.1rem;
 }
 
 
@@ -389,7 +428,7 @@ display: none;
     <h2 class="h2">YOUR CART IS EMPTY PLEASE ADD TO YOUR CART</h2>
     <div class="carts-div"></div>
     <div id="check-out"></div>
-    <button id="button-check">Check-out</button>
+    
     <button onclick="cloFunction()">Back To Home Page</button>
   </div>
   <div class="tomato-div">
@@ -432,14 +471,15 @@ display: none;
 
   </div>
   <div class="check-out">
-    <p>Number Of Items <span class="check-span"></span></p>
+    <p>Number Of Cart Items <span class="check-span"></span></p>
     <ul>
 <li id="list-check">FRESH TOMATO =<span id="span-tom"></span><strong id="check-strong"></strong> = <strong id="checks-strong"></strong></li>
  <li id="list-checks">FRESH FRUITS =<span id="span-fru"></span><strong id="check-strongs"></strong> = <strong id="checks-strongs"></strong></li>
- <li id="list-checkss" ><span></span><strong id="check-strongs"></strong> = <strong id="checks-strongss"></strong></li>
+ <li id="list-checkss" ><span></span><strong id="check-strongsss"></strong> = <strong id="checks-strongss"></strong></li>
     </ul>
     <button>CHECKOUT(<span id="click-span"></span>)</button>
   </div>
+  
   <script>
    var d = 0
  let y =  setInterval(checkFunction, 100)
@@ -466,6 +506,7 @@ display: none;
     
 c.innerHTML += g.innerHTML
 v.style.display = "block"
+
 //v.innerHTML = "FRESH TOMATO ="
 u.innerHTML = 250 + " " + "*" + " "
 
@@ -474,6 +515,11 @@ m.removeAttribute("onclick", "myFunction()")
 
 
 }
+function cheFunction() {
+    let v = document.querySelector("#list-check")
+    v.style.display = "none"
+}
+
 function numFunction() {
     let v = document.querySelector(".check-span")
     let a = document.querySelector("#button-11")
@@ -503,6 +549,7 @@ function checkFunction() {
     let c = document.querySelector("#check-out")
     if(d == 1 || d > 1) {
         c.style.display = "block"
+        
 c.innerHTML += b.innerHTML
 clearInterval(y)
 
@@ -540,6 +587,9 @@ clearInterval(y)
     let c = document.querySelector(".carts-div")
     let g = document.querySelector(".apple-div")
     let o = document.querySelector(".h2")
+    let u = document.querySelector("#span-fru")
+    let v = document.querySelector("#list-checks")
+    v.style.display = "block"
     o.innerHTML = "YOUR CARTS ITEM"
     d++
     a.innerHTML = d
@@ -547,6 +597,7 @@ clearInterval(y)
   
     
 c.innerHTML += g.innerHTML
+u.innerHTML = 500 + " " + "*" + " "
 m.removeAttribute("onclick", "appFunction()")
 
    } 
@@ -604,7 +655,11 @@ function calsFunction() {
     let a = document.querySelector("#input-2")
     let b = document.querySelector(".span-4")
     let v = document.querySelector("#span-13")
+    let l = document.querySelector("#check-strongs")
+    let x = document.querySelector("#checks-strongs")
     b.innerHTML = 250 * Number(a.value)
+    l.innerHTML = a.value + " " + v.innerHTML
+    x.innerHTML = "<del>N</del>" + b.innerHTML
     if(a.value > 1) {
         v.innerHTML = "quantities"
     }
@@ -636,11 +691,15 @@ function remTom() {
     let p = document.querySelector(".img-tom")
     let o = document.querySelector(".h2")
     let c = document.querySelector("#button-11")
+    let u = document.querySelector("#span-tom")
+    let v = document.querySelector("#list-check")
 
     
   q.setAttribute("onclick", "comFunction()")
     
     a.setAttribute("onclick", "calFunction()")
+    u.style.display = "none"
+    v.style.display = "none"
     if(event.target == b) {
       g.style.display = "none"
       p.style.display = "none"
@@ -663,9 +722,13 @@ function remApple() {
     let p = document.querySelector(".img-app")
     let o = document.querySelector(".h2")
     let c = document.querySelector("#button-11")
+    let u = document.querySelector("#span-fru")
+    let v = document.querySelector("#list-checks")
 
     q.setAttribute("onclick", "comsFunction()")
     a.setAttribute("onclick", "calFunction()")
+    u.style.display = "none"
+    v.style.display = "none"
     if(event.target == b) {
       g.style.display = "none"
       p.style.display = "none"
@@ -717,12 +780,15 @@ function comFunction() {
     let p = document.querySelector(".img-tom")
     let z = document.querySelector("#button-11")
     let o = document.querySelector(".h2")
+    let v = document.querySelector("#list-check")
     g.style.display = "flex"
       p.style.display = "inline"
       b.style.display = "inline"
       o.innerHTML = "YOUR CARTS ITEM"
       d++
       z.innerHTML = d
+     
+    v.style.display = "block"
       q.removeAttribute("onclick", "comFunction()")
       
       
