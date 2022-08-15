@@ -340,6 +340,7 @@ width: 92%;
     color: black;
     text-align: center;
     font-size: 1.2rem;
+    font-weight: bold;
 }
 .check-out > ul {
     list-style-type: circle;
@@ -367,9 +368,9 @@ margin-right: 5%;
 }
 #check-out > button {
     border-radius: 2px 2px 2px 2px;
-    background-color: lime;
+    background-color: grey;
     color: white;
-   margin-left: 20%;
+   margin-left: 24.6%;
    margin-right: 10%;
    margin-top: 4%;
    margin-bottom: 2%;
@@ -377,7 +378,7 @@ margin-right: 5%;
     width: 11rem;
     height: 2rem;
     font-size: 1.1rem;
-    display: none;
+    
 }
 
 
@@ -475,7 +476,7 @@ margin-right: 5%;
     <ul>
 <li id="list-check">FRESH TOMATO =<span id="span-tom"></span><strong id="check-strong"></strong> = <strong id="checks-strong"></strong></li>
  <li id="list-checks">FRESH FRUITS =<span id="span-fru"></span><strong id="check-strongs"></strong> = <strong id="checks-strongs"></strong></li>
- <li id="list-checkss" ><span></span><strong id="check-strongsss"></strong> = <strong id="checks-strongss"></strong></li>
+ <li id="list-checkss" >FRESH BERRIES =<span id="span-ber"></span><strong id="check-strongsss"></strong> = <strong id="checks-strongss"></strong></li>
     </ul>
     <button>CHECKOUT(<span id="click-span"></span>)</button>
   </div>
@@ -607,6 +608,10 @@ m.removeAttribute("onclick", "appFunction()")
     let c = document.querySelector(".carts-div")
     let g = document.querySelector(".ber-div")
     let o = document.querySelector(".h2")
+    let u = document.querySelector("#span-ber")
+    let v = document.querySelector("#list-checkss")
+    v.style.display = "block"
+    u.innerHTML = 500 + " " + "*" + " "
     o.innerHTML = "YOUR CARTS ITEM"
     d++
     a.innerHTML = d
@@ -671,7 +676,11 @@ function calssFunction() {
     let a = document.querySelector("#input-3")
     let b = document.querySelector(".span-5")
     let v = document.querySelector("#span-15")
+    let l = document.querySelector("#check-strongsss")
+    let x = document.querySelector("#checks-strongss")
     b.innerHTML = 250 * Number(a.value)
+    l.innerHTML = a.value + " " + v.innerHTML
+    x.innerHTML = "<del>N</del>" + b.innerHTML
     if(a.value > 1) {
         v.innerHTML = "quantities"
     }
@@ -748,9 +757,14 @@ function remBer() {
     let p = document.querySelector(".img-ber")
     let o = document.querySelector(".h2")
     let c = document.querySelector("#button-11")
+    let u = document.querySelector("#span-ber")
+    let v = document.querySelector("#list-checkss")
+
 
     q.setAttribute("onclick", "comssFunction()")
     a.setAttribute("onclick", "calFunction()")
+    u.style.display = "none"
+    v.style.display = "none"
     if(event.target == b) {
       g.style.display = "none"
       p.style.display = "none"
@@ -781,6 +795,7 @@ function comFunction() {
     let z = document.querySelector("#button-11")
     let o = document.querySelector(".h2")
     let v = document.querySelector("#list-check")
+    let u = document.querySelector("#span-tom")
     g.style.display = "flex"
       p.style.display = "inline"
       b.style.display = "inline"
@@ -789,6 +804,9 @@ function comFunction() {
       z.innerHTML = d
      
     v.style.display = "block"
+    u.style.display = "inline"
+    u.innerHTML = 250 + " " + "*" + " "
+    
       q.removeAttribute("onclick", "comFunction()")
       
       
@@ -803,12 +821,17 @@ function comsFunction() {
     let p = document.querySelector(".img-app")
     let z = document.querySelector("#button-11")
     let o = document.querySelector(".h2")
+    let u = document.querySelector("#span-tom")
+    let v = document.querySelector("#list-checks")
     g.style.display = "flex"
       p.style.display = "inline"
       b.style.display = "inline"
       o.innerHTML = "YOUR CARTS ITEM"
       d++
       z.innerHTML = d
+      v.style.display = "block"
+    u.style.display = "inline"
+    u.innerHTML = 250 + " " + "*" + " "
       q.removeAttribute("onclick", "comsFunction()")
       
 
@@ -821,12 +844,17 @@ function comssFunction() {
     let p = document.querySelector(".img-ber")
     let z = document.querySelector("#button-11")
     let o = document.querySelector(".h2")
+    let u = document.querySelector("#span-ber")
+    let v = document.querySelector("#list-checkss")
     g.style.display = "flex"
       p.style.display = "inline"
       b.style.display = "inline"
       o.innerHTML = "YOUR CARTS ITEM"
       d++
       z.innerHTML = d
+      v.style.display = "block"
+    u.style.display = "inline"
+    u.innerHTML = 250 + " " + "*" + " "
       q.removeAttribute("onclick", "comssFunction()")
       
 
