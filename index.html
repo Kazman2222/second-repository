@@ -481,7 +481,7 @@ margin-right: 5%;
  <li id="list-checks">FRESH FRUITS =<span id="span-fru"></span><strong id="check-strongs"></strong> = <strong id="checks-strongs"></strong></li>
  <li id="list-checkss" >FRESH BERRIES =<span id="span-ber"></span><strong id="check-strongsss"></strong> = <strong id="checks-strongss"></strong></li>
     </ul>
-    <button>CHECKOUT(<span id="click-span"></span>)</button>
+    <button>CHECKOUT(<del>N</del><span id="click-span"></span>)</button>
   </div>
   
   <script>
@@ -649,9 +649,13 @@ function calFunction() {
     let v = document.querySelector("#span-11")
     let l = document.querySelector("#check-strong")
     let x = document.querySelector("#checks-strong")
+    let p = document.querySelector(".span-4")
+    let q = document.querySelector("#click-span")
+    let r = document.querySelector(".span-5")
     b.innerHTML = 250 * Number(a.value)
     l.innerHTML = a.value + " " + v.innerHTML
     x.innerHTML = "<del>N</del>" + b.innerHTML
+    q.innerHTML = Number(b.innerHTML) + Number(p.innerHTML) + Number(r.innerHTML)
     if(a.value > 1) {
         v.innerHTML = "quantities"
     }
@@ -662,12 +666,17 @@ function calFunction() {
 function calsFunction() {
     let a = document.querySelector("#input-2")
     let b = document.querySelector(".span-4")
+    let p = document.querySelector(".span-3")
+    let r = document.querySelector(".span-5")
     let v = document.querySelector("#span-13")
     let l = document.querySelector("#check-strongs")
     let x = document.querySelector("#checks-strongs")
+    let q = document.querySelector("#click-span")
+    
     b.innerHTML = 1000 * Number(a.value)
     l.innerHTML = a.value + " " + v.innerHTML
     x.innerHTML = "<del>N</del>" + b.innerHTML
+    q.innerHTML = Number(b.innerHTML) + Number(p.innerHTML) + Number(r.innerHTML)
     if(a.value > 1) {
         v.innerHTML = "quantities"
     }
@@ -678,12 +687,16 @@ function calsFunction() {
 function calssFunction() {
     let a = document.querySelector("#input-3")
     let b = document.querySelector(".span-5")
+    let p = document.querySelector(".span-3")
+    let r = document.querySelector(".span-4")
     let v = document.querySelector("#span-15")
     let l = document.querySelector("#check-strongsss")
     let x = document.querySelector("#checks-strongss")
+    let q = document.querySelector("#click-span")
     b.innerHTML = 750 * Number(a.value)
     l.innerHTML = a.value + " " + v.innerHTML
     x.innerHTML = "<del>N</del>" + b.innerHTML
+    q.innerHTML = Number(b.innerHTML) + Number(p.innerHTML) + Number(r.innerHTML)
     if(a.value > 1) {
         v.innerHTML = "quantities"
     }
