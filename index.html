@@ -718,6 +718,13 @@ function remTom() {
     let c = document.querySelector("#button-11")
     let u = document.querySelector("#span-tom")
     let v = document.querySelector("#list-check")
+    let l = document.querySelector(".span-4")
+    let m = document.querySelector(".span-3")
+    let r = document.querySelector(".span-5")
+    let s = document.querySelector("#click-span")
+    let i = document.querySelector("#check-strong")
+    let x = document.querySelector("#checks-strong")
+    
 
     
   q.setAttribute("onclick", "comFunction()")
@@ -725,6 +732,11 @@ function remTom() {
     a.setAttribute("onclick", "calFunction()")
     u.style.display = "none"
     v.style.display = "none"
+    a.value = 0
+    m.innerHTML = 0 * 250
+    i.innerHTML = 0
+    x.innerHTML = 0
+    s.innerHTML = Number(l.innerHTML) + Number(r.innerHTML)
     if(event.target == b) {
       g.style.display = "none"
       p.style.display = "none"
@@ -741,7 +753,7 @@ function remTom() {
 }
 function remApple() {
     let b = document.querySelector(".button-app")
-    let a = document.querySelector("#input-1")
+    let a = document.querySelector("#input-2")
     let q = document.querySelector(".buttons-2")
     let g = document.querySelector(".quantities")
     let p = document.querySelector(".img-app")
@@ -749,11 +761,22 @@ function remApple() {
     let c = document.querySelector("#button-11")
     let u = document.querySelector("#span-fru")
     let v = document.querySelector("#list-checks")
+    let l = document.querySelector(".span-4")
+    let m = document.querySelector(".span-3")
+    let r = document.querySelector(".span-5")
+    let s = document.querySelector("#click-span")
+    let i = document.querySelector("#check-strongs")
+    let x = document.querySelector("#checks-strongs")
 
     q.setAttribute("onclick", "comsFunction()")
     a.setAttribute("onclick", "calFunction()")
     u.style.display = "none"
     v.style.display = "none"
+    a.value = 0
+    l.innerHTML = 0 * 1000
+    i.innerHTML = 0
+    x.innerHTML = 0
+    s.innerHTML = Number(m.innerHTML) + Number(r.innerHTML)
     if(event.target == b) {
       g.style.display = "none"
       p.style.display = "none"
@@ -762,12 +785,14 @@ function remApple() {
        d--
        c.innerHTML = d
      
+
+       
 }
 
 }
 function remBer() {
     let b = document.querySelector(".button-ber")
-    let a = document.querySelector("#input-1")
+    let a = document.querySelector("#input-3")
     let q = document.querySelector(".buttons-3")
     let g = document.querySelector(".quantitiess")
     let p = document.querySelector(".img-ber")
@@ -775,12 +800,23 @@ function remBer() {
     let c = document.querySelector("#button-11")
     let u = document.querySelector("#span-ber")
     let v = document.querySelector("#list-checkss")
+    let l = document.querySelector(".span-4")
+    let m = document.querySelector(".span-3")
+    let r = document.querySelector(".span-5")
+    let s = document.querySelector("#click-span")
+    let i = document.querySelector("#check-strongsss")
+    let x = document.querySelector("#checks-strongss")
 
 
     q.setAttribute("onclick", "comssFunction()")
     a.setAttribute("onclick", "calFunction()")
     u.style.display = "none"
     v.style.display = "none"
+    a.value = 0
+    r.innerHTML = 0 * 750
+    i.innerHTML = 0
+    x.innerHTML = 0
+    s.innerHTML = Number(m.innerHTML) + Number(l.innerHTML)
     if(event.target == b) {
       g.style.display = "none"
       p.style.display = "none"
