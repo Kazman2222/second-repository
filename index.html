@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
           @media only screen and (max-width: 480px)  {
+          
 .div-1 {
     width: 100%;
     background-color: navy;
@@ -175,7 +176,7 @@ width: 92%;
 }
 .div-1 > button {
     position: absolute;
-    right: 1.1rem;
+    right: 1.2rem;
     top: 7px;
     border-radius: 50%;
     width: 1.5rem;
@@ -383,19 +384,97 @@ margin-right: 5%;
     font-size: 1.1rem;
     
 }
-
+.added-succ {
+    background-color: rgb(12, 137, 12);
+    color: white;
+    width: 97.5%;
+    height: 3rem;
+    position: absolute;
+    top: -4rem;
+    left: 0;
+    padding-left: 2.5%;
+    animation-duration: 1.7s;
+    animation-direction: alternate;
+    font-size: 1.2rem;
+    text-align: center;
+    
+    
+}
+@keyframes cart {
+    from {top: -4rem;}
+    to {top: 0rem;}
+}
+@keyframes carts {
+    from {top: -4rem;}
+    to {top: 0rem;}
+}
+@keyframes cartss {
+    from {top: -4rem;}
+    to {top: 0rem;}
+}
+.removed-succ {
+    background-color: rgb(145, 19, 19);
+    color: white;
+    width: 97.5%;
+    height: 3rem;
+    position: absolute;
+    top: -5rem;
+    left: 0;
+    padding-left: 2.5%;
+    animation-duration: 1.6s;
+    animation-direction: alternate;
+    font-size: 1.1rem;
+    text-align: center;
+    
+    
+}
+@keyframes remove {
+    from {top: -5rem;}
+    to {top: 0rem;}
+}
+@keyframes removes {
+    from {top: -5rem;}
+    to {top: 0rem;}
+}
+@keyframes removess {
+    from {top: -5rem;}
+    to {top: 0rem;}
+}
+.customers {
+    width: 108.8%;
+    position: relative;
+    top: 5rem;
+    left: -0.5rem;
+    background-color: dodgerblue;
+    text-align: center;
+    color: white;
+}
+.customers > p {
+    display: flex;
+    flex-direction: column;
+}
+.customers > p > span {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
 
 
           }
     </style>
 </head>
-<body>
+<body onscroll="removeFunction()">
     <div class="div-1">
         <i class="icon fa fa-bars"></i>
          <span>Tobi's Store</span>
          <i class="icons fa fa-shopping-cart" onclick="hideFunction()"></i>
          <button id="button-11">0</button>
     </div>
+    <div class="added-succ">
+<p>your cart item has been added</p>
+    </div>
+     <div class="removed-succ">
+        <p>your cart item has been removed</p>
+            </div>
    <div class="div-2">
 <h5>Natural Foods</h5>
 <h2>Healthy & Fresh</h2>
@@ -427,6 +506,28 @@ margin-right: 5%;
     <button id="button-ber">view in store</button>
 </div>
     </div>
+    <div class="customers">
+        <p>
+            
+            <span class="span-100">100+</span>
+            <span>Years of Foundation</span>
+        </p>
+        <p>
+            
+            <span class="span-200">162+</span>
+            <span>Expert Team</span>
+        </p>
+        <p>
+            
+            <span class="span-300">320+</span>
+            <span>Activate Products</span>
+        </p>
+        <p>
+            
+            <span class="span-400">23+</span>
+            <span>Awards Winning</span>
+        </p>
+          </div>
   </div>
   <div class="cart-div">
     <h2 class="h2">YOUR CART IS EMPTY PLEASE ADD TO YOUR CART</h2>
@@ -483,14 +584,119 @@ margin-right: 5%;
     </ul>
     <button>CHECKOUT(<del>N</del><span id="click-span"></span>)</button>
   </div>
+  <div>
+    <div>
+        
+    </div>
+  </div>
+ 
   
   <script>
    var d = 0
+   var yoo = 0
+   var uoo = 0
+   var voo = 0
+   var qoo = 0
+
  let y =  setInterval(checkFunction, 100)
    setInterval(setFunction, 100)
    setInterval(numFunction, 100)
+  var hoo = setInterval(cartFunction, 20)
+   var uoos = setInterval(cartsFunction, 20)
+   var voos = setInterval(cartssFunction, 20)
+   var qoos = setInterval(cartsssFunction, 20)
+   
+   function removeFunction() {
   
    
+   if(document.documentElement.scrollTop > 950) {
+    document.body.style.backgroundColor = "blue"
+  
+
+  
+   } else {
+    document.body.style.backgroundColor = "yellow"
+   }
+
+    
+   }
+  
+  function cartFunction() {
+    let w = document.querySelector(".span-100")
+    if(document.documentElement.scrollTop > 950) {
+        yoo++
+  
+
+  
+   } 
+  
+  
+   w.innerHTML = yoo + "+"
+   if(yoo == 100) {
+    clearInterval(hoo)
+   }
+   
+   
+    
+   }
+   function cartsFunction() {
+    let w = document.querySelector(".span-200")
+    if(document.documentElement.scrollTop > 950) {
+    uoo++
+  
+
+  
+   } 
+  
+   
+  
+   w.innerHTML = uoo + "+"
+   if(uoo == 162) {
+    clearInterval(uoos)
+   }
+   
+   
+    
+   }
+   function cartssFunction() {
+    let w = document.querySelector(".span-300")
+    if(document.documentElement.scrollTop > 950) {
+        voo++
+  
+
+  
+   } 
+  
+   
+  
+   w.innerHTML = voo + "+"
+   if(voo == 320) {
+    clearInterval(voos)
+   }
+   
+   
+    
+   }
+   function cartsssFunction() {
+    let w = document.querySelector(".span-400")
+    if(document.documentElement.scrollTop > 950) {
+        qoo++
+  
+
+  
+   } 
+  
+   
+  
+   w.innerHTML = qoo + "+"
+   if(qoo == 23) {
+    clearInterval(qoos)
+   }
+   
+   
+    
+   }
+  
   
    function myFunction() {
     
@@ -503,9 +709,13 @@ margin-right: 5%;
     let u = document.querySelector("#span-tom")
     let n = document.querySelector("#input-1")
     let l = document.querySelector("#check-strong")
+    let t = document.querySelector(".div-1")
+    let w = document.querySelector(".added-succ")
+    let y = document.querySelector(".removed-succ")
     o.innerHTML = "YOUR CARTS ITEM"
     d++
     a.innerHTML = d
+  
  
     
 c.innerHTML += g.innerHTML
@@ -515,6 +725,11 @@ v.style.display = "block"
 u.innerHTML = 250 + " " + "*" + " "
 
 m.removeAttribute("onclick", "myFunction()")
+w.style.animationName = "cart"
+y.style.animationName = "rat"
+//clearInterval(yo)
+
+//w.style.top = "0rem"
 
 
 
@@ -593,6 +808,8 @@ clearInterval(y)
     let o = document.querySelector(".h2")
     let u = document.querySelector("#span-fru")
     let v = document.querySelector("#list-checks")
+    let w = document.querySelector(".added-succ")
+    let y = document.querySelector(".removed-succ")
     v.style.display = "block"
     o.innerHTML = "YOUR CARTS ITEM"
     d++
@@ -603,6 +820,8 @@ clearInterval(y)
 c.innerHTML += g.innerHTML
 u.innerHTML = 1000 + " " + "*" + " "
 m.removeAttribute("onclick", "appFunction()")
+w.style.animationName = "carts"
+y.style.animationName = "rat"
 
    } 
    function berFunction() {
@@ -613,6 +832,8 @@ m.removeAttribute("onclick", "appFunction()")
     let o = document.querySelector(".h2")
     let u = document.querySelector("#span-ber")
     let v = document.querySelector("#list-checkss")
+    let w = document.querySelector(".added-succ")
+    let y = document.querySelector(".removed-succ")
     v.style.display = "block"
     u.innerHTML = 750 + " " + "*" + " "
     o.innerHTML = "YOUR CARTS ITEM"
@@ -623,6 +844,8 @@ m.removeAttribute("onclick", "appFunction()")
     
 c.innerHTML += g.innerHTML
 m.removeAttribute("onclick", "berFunction()")
+w.style.animationName = "cartss"
+y.style.animationName = "rat"
 
    } 
    
@@ -724,6 +947,8 @@ function remTom() {
     let s = document.querySelector("#click-span")
     let i = document.querySelector("#check-strong")
     let x = document.querySelector("#checks-strong")
+    let w = document.querySelector(".added-succ")
+    let y = document.querySelector(".removed-succ")
     
 
     
@@ -737,6 +962,8 @@ function remTom() {
     i.innerHTML = 0
     x.innerHTML = 0
     s.innerHTML = Number(l.innerHTML) + Number(r.innerHTML)
+    w.style.animationName = "rat"
+    y.style.animationName = "remove"
     if(event.target == b) {
       g.style.display = "none"
       p.style.display = "none"
@@ -767,6 +994,8 @@ function remApple() {
     let s = document.querySelector("#click-span")
     let i = document.querySelector("#check-strongs")
     let x = document.querySelector("#checks-strongs")
+    let w = document.querySelector(".added-succ")
+    let y = document.querySelector(".removed-succ")
 
     q.setAttribute("onclick", "comsFunction()")
     a.setAttribute("onclick", "calFunction()")
@@ -777,6 +1006,8 @@ function remApple() {
     i.innerHTML = 0
     x.innerHTML = 0
     s.innerHTML = Number(m.innerHTML) + Number(r.innerHTML)
+    w.style.animationName = "rat"
+    y.style.animationName = "removes"
     if(event.target == b) {
       g.style.display = "none"
       p.style.display = "none"
@@ -806,6 +1037,8 @@ function remBer() {
     let s = document.querySelector("#click-span")
     let i = document.querySelector("#check-strongsss")
     let x = document.querySelector("#checks-strongss")
+    let w = document.querySelector(".added-succ")
+    let y = document.querySelector(".removed-succ")
 
 
     q.setAttribute("onclick", "comssFunction()")
@@ -817,6 +1050,8 @@ function remBer() {
     i.innerHTML = 0
     x.innerHTML = 0
     s.innerHTML = Number(m.innerHTML) + Number(l.innerHTML)
+    w.style.animationName = "rat"
+    y.style.animationName = "removess"
     if(event.target == b) {
       g.style.display = "none"
       p.style.display = "none"
@@ -848,6 +1083,8 @@ function comFunction() {
     let o = document.querySelector(".h2")
     let v = document.querySelector("#list-check")
     let u = document.querySelector("#span-tom")
+    let w = document.querySelector(".added-succ")
+    let y = document.querySelector(".removed-succ")
     g.style.display = "flex"
       p.style.display = "inline"
       b.style.display = "inline"
@@ -860,6 +1097,9 @@ function comFunction() {
     u.innerHTML = 250 + " " + "*" + " "
     
       q.removeAttribute("onclick", "comFunction()")
+      w.style.animationName = "cart"
+      y.style.animationName = "rat"
+      
       
       
       
@@ -875,6 +1115,8 @@ function comsFunction() {
     let o = document.querySelector(".h2")
     let u = document.querySelector("#span-fru")
     let v = document.querySelector("#list-checks")
+    let w = document.querySelector(".added-succ")
+    let y = document.querySelector(".removed-succ")
     g.style.display = "flex"
       p.style.display = "inline"
       b.style.display = "inline"
@@ -884,6 +1126,8 @@ function comsFunction() {
       v.style.display = "block"
     u.style.display = "inline"
     u.innerHTML = 1000 + " " + "*" + " "
+    w.style.animationName = "carts"
+    y.style.animationName = "rat"
       q.removeAttribute("onclick", "comsFunction()")
       
 
@@ -898,6 +1142,8 @@ function comssFunction() {
     let o = document.querySelector(".h2")
     let u = document.querySelector("#span-ber")
     let v = document.querySelector("#list-checkss")
+    let w = document.querySelector(".added-succ")
+    let y = document.querySelector(".removed-succ")
     g.style.display = "flex"
       p.style.display = "inline"
       b.style.display = "inline"
@@ -907,6 +1153,8 @@ function comssFunction() {
       v.style.display = "block"
     u.style.display = "inline"
     u.innerHTML = 750 + " " + "*" + " "
+    w.style.animationName = "cartss"
+    y.style.animationName = "rat"
       q.removeAttribute("onclick", "comssFunction()")
       
 
