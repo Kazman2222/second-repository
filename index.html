@@ -71,7 +71,7 @@ font-weight: bold;
     background-color: lightblue;
     color: white;
     animation-name: natu;
-    animation-duration: 6s;
+    animation-duration: 5s;
 }
 .div-3 {
 
@@ -559,7 +559,7 @@ margin-right: 5%;
 }
 #Natu {
     animation-name: natu;
-    animation-duration: 6s;
+    animation-duration: 5s;
     
 }
 @keyframes natu {
@@ -569,7 +569,7 @@ margin-right: 5%;
 }
 #heal {
     animation-name: natu;
-    animation-duration: 6s;
+    animation-duration: 5s;
     
 }
 @keyframes natu {
@@ -579,7 +579,7 @@ margin-right: 5%;
 }
 #limi {
     animation-name: natu;
-    animation-duration: 6s;
+    animation-duration: 5s;
     
 }
 @keyframes natu {
@@ -587,11 +587,22 @@ margin-right: 5%;
     to{opacity: 2.0;}
     
 }
+.around {
+    position: relative;
+   display: none;
+    top: 3rem;
+    font-size: 1.5rem;
+    margin-left: 85%;
+    margin-right: 5%;
+    color: green;
+    background-color: white;
+    border-radius: 40%;
+}
 
           }
     </style>
 </head>
-<body onscroll="removeFunction()">
+<body  onscroll="scrFunction()">
     <div class="div-1">
         <i class="icon fa fa-bars"></i>
          <span>Tobi's Store</span>
@@ -609,9 +620,11 @@ margin-right: 5%;
 <h2 id="heal">Healthy & Fresh</h2>
 <h5 id="limi">Limited offer</h5>
 <button class="button-1">Order  Now</button>
+
    </div>
   <div class="div-3">
     <h4>Our Products</h4>
+  
     <div class="images">
 <div class="img-1">
     <img src="tomato.jpg" alt="">
@@ -673,6 +686,7 @@ margin-right: 5%;
                 <button>View Item <span  class="right fa fa-arrow-right"></span></button>
             </div>
               </div>
+             
   </div>
  
   <div class="cart-div">
@@ -752,7 +766,54 @@ margin-right: 5%;
    var voos = setInterval(cartssFunction, 20)
    var qoos = setInterval(cartsssFunction, 20)
    
- 
+ function scrFunction() {
+    let i = document.querySelector(".around")
+    if(document.documentElement.scrollTop > 50) {
+        i.style.top = "-10rem"
+       // document.body.style.backgroundColor = "blue"
+    }
+    if(document.documentElement.scrollTop > 90) {
+        i.style.top = "-5rem"
+      //  document.body.style.backgroundColor = "yellow"
+    }
+    if(document.documentElement.scrollTop > 200) {
+        i.style.top = "-1rem"
+      //  document.body.style.backgroundColor = "red"
+    }
+    if(document.documentElement.scrollTop > 500) {
+        i.style.top = "10rem"
+      //  document.body.style.backgroundColor = "orange"
+    }
+    if(document.documentElement.scrollTop > 800) {
+        i.style.top = "30rem"
+      //  document.body.style.backgroundColor = "cyan"
+    }
+    if(document.documentElement.scrollTop > 1000) {
+        i.style.top = "41rem"
+      //  document.body.style.backgroundColor = "grey"
+    }
+    if(document.documentElement.scrollTop > 1200) {
+        i.style.top = "52rem"
+      //  document.body.style.backgroundColor = "lavender"
+    }
+    if(document.documentElement.scrollTop > 1400) {
+        i.style.top = "63rem"
+       // document.body.style.backgroundColor = "brown"
+    }
+    if(document.documentElement.scrollTop > 1600) {
+        i.style.top = "76rem"
+      //  document.body.style.backgroundColor = "khaki"
+    }
+    if(document.documentElement.scrollTop > 1900) {
+        i.style.top = "100rem"
+       // document.body.style.backgroundColor = "white"
+    }
+    if(document.documentElement.scrollTop > 2100) {
+        i.style.top = "115.2rem"
+        
+    }
+   
+ }
   
   function cartFunction() {
     let w = document.querySelector(".span-100")
