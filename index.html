@@ -504,7 +504,7 @@ margin-right: 5%;
     background-color: rgb(8, 134, 134);
     border: none;
     margin-top: 4.5%;
-    width: 50%;
+    width: 53%;
     height: 2.5rem;
     border-radius: 30px 30px 30px 30px;
     font-size: 1.5rem;
@@ -545,7 +545,7 @@ margin-right: 5%;
     background-color: darkcyan;
     border: none;
     margin-top: 4.5%;
-    width: 50%;
+    width: 53%;
     height: 2.5rem;
     border-radius: 30px 30px 30px 30px;
     font-size: 1.5rem;
@@ -589,19 +589,98 @@ margin-right: 5%;
 }
 
 .people-say {
-    width: 104.5%;
+    width: 108.7%;
     position: relative;
     top: 3rem;
-    left: 0rem;
+    left: -0.5rem;
+    background-color: rgb(229, 229, 107);
+    font-family: monospace;
     
     
     
+}
+.people {
+   
+    text-align: center;
+    margin-top: 3%;
+    margin-bottom: 2%;
 }
 .people > h3 {
     text-align: center;
     color: black;
+    
+}
+.people > p {
+    border: 2px solid rgb(70, 185, 70);
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    text-align: center; 
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 5%;
+}
+.first-person > img {
+border-radius: 50%;
+margin: 2% 10%;
+text-align: center;
+}
+.first-person {
+    width: 100%;
+    text-align: center;
+    
+   
+}
+.img-51{
+border-radius: 50%;
+margin: 2% 10%;
+text-align: center;
+width: 15rem;
+height: 15rem;
+}
+.second-person {
+    width: 100%;
+    text-align: center;
+    display: none;
+    
+   
+}
+.seconds-person > img {
+border-radius: 50%;
+margin: 2% 10%;
+text-align: center;
+}
+.seconds-person {
+    width: 100%;
+    text-align: center;
+    display: none;
+    
+   
+}
+.img-52
+ {
+border-radius: 50%;
+margin: 2% 10%;
+text-align: center;
+width: 15rem;
+height: 15rem;
 
 }
+.third-person {
+    width: 100%;
+    text-align: center;
+    display: none;
+   
+}
+hr {
+     background-color: black;
+     color: red;
+     accent-color: green;
+}
+
+
+
+
           }
     </style>
 </head>
@@ -690,8 +769,44 @@ margin-right: 5%;
             </div>
               </div>
               <div class="people-say">
-                <div class="people"><h3>What People Say</p></h3>
+                <div class="people">
+                    <h2>What People Say</h2>
+                    <p class="rich-3"></p>
+                </div>
+                <div class="main-slide">
+                    <div class="first-person" id="bolas">
+                    <img  src="handsome.jpg" alt="hey">
+                    <p>"I have been shopping with Tobi's store for Months and they are the best.I sit at home and they get my goods delivered at the right time."</p>
+                    <hr>
+                    <h4>KEVIN DE BRYUNE</h4>
+                    <p>Footballer</p>
+                    </div>
+                    <div class="second-person">
+                        <img class="img-51" src="ugly.jpg" alt="hey">
+                        <p>"I have been shopping with Tobi's store for Months and they are the best.I sit at home and they get my goods delivered at the right time."</p>
+                        <hr>
+                        <h4>KEVIN DE BRYUNE</h4>
+                        <p>Footballer</p>
+                        </div>
+                        <div class="third-person">
+                            <img class="img-52" src="beau.jpg" alt="hey">
+                            <p>"I have been shopping with Tobi's store for Months and they are the best.I sit at home and they get my goods delivered at the right time."</p>
+                            <hr>
+                            <h4>KEVIN DE BRYUNE</h4>
+                            <p>Footballer</p>
+                            </div>
+                        </div>
+                        <div class="seconds-person">
+                            <img class="img-52" src="handsome.jpg" alt="hey">
+                            <p>"I have been shopping with Tobi's store for Months and they are the best.I sit at home and they get my goods delivered at the right time."</p>
+                            <hr>
+                            <h4>KEVIN DE BRYUNE</h4>
+                            <p>Footballer</p>
+                            </div>
+                        </div>
+
               </div>
+
              
   </div>
  
@@ -771,6 +886,35 @@ margin-right: 5%;
    var uoos = setInterval(cartsFunction, 20)
    var voos = setInterval(cartssFunction, 20)
    var qoos = setInterval(cartsssFunction, 20)
+   setInterval(slideFunction, 1000)
+   function slideFunction() {
+    let r =document.querySelector(".main-slide")
+    let c = new Date().getSeconds()
+    let a = document.querySelector(".first-person")
+    let p = document.querySelector(".second-person")
+    let q = document.querySelector(".third-person")
+    let y = document.querySelector(".rich-3")
+    let x = document.querySelector(".seconds-person")
+    
+   
+  //  y.innerHTML = c
+    if(c == 8) {
+a.innerHTML = p.innerHTML
+    }
+    if(c == 20) {
+    a.innerHTML = q.innerHTML
+    }
+     if(c == 30) {
+    a.innerHTML = x.innerHTML
+    }
+      if(c == 40) {
+    a.innerHTML = p.innerHTML
+    } if(c == 50) {
+    a.innerHTML = q.innerHTML
+    }
+  
+ 
+   }
    
  function scrFunction() {
     let i = document.querySelector(".around")
