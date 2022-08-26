@@ -401,10 +401,10 @@ margin-right: 5%;
     position: fixed;
     top: -4rem;
     left: 0;
-    padding-left: 2.5%;
+    padding-left: 2.1%;
     animation-duration: 1.7s;
     animation-direction: alternate;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-align: center;
     z-index: 3;
     font-family: monospace;
@@ -432,7 +432,7 @@ margin-right: 5%;
     position: fixed;
     top: -5rem;
     left: 0;
-    padding-left: 2.5%;
+    padding-left: 2.1%;
     animation-duration: 1.6s;
     animation-direction: alternate;
     font-size: 1.1rem;
@@ -724,6 +724,86 @@ hr {
      color: red;
      accent-color: green;
 }
+.footers {
+    width: 108.7%;
+    position: relative;
+    top: 6.5rem;
+    left: -0.5rem;
+    background-color: grey;
+    font-family: serif;
+    
+    
+}
+.first-section {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: 3%;
+    color: white;
+    font-size: 1.2rem;
+
+}
+.first-section > h2 {
+    color: lawngreen;
+    font-size: 1.2rem;
+    text-align: center;
+}
+.list-foot > li > a {
+text-decoration: none;
+color: white;
+font-size: 1.3rem;
+}
+.list-foot {
+    list-style-type: none;
+    margin-left: -6%;
+
+}
+.list-foot > li {
+    margin-top: 2.5%;
+}
+.second-section > h2 {
+    margin-left: 2%;
+    color: lawngreen;
+}
+.third-section > h2 {
+    margin-left: 2%;
+    color: lawngreen;
+}
+.third-section > p {
+    font-family: monospace;
+    color: mintcream;
+}
+.third-section > input {
+    width: 70%;
+    height: 2.5rem;
+    
+    border-left-style: none;
+    border-bottom-style: none;
+    border-top-style: none;
+    border-right-color: none;
+    padding-left: 1%;
+    border-radius: 3px 3px 3px 3px;
+}
+.third-section > button {
+    margin-left: 0%;
+    width: 25%;
+    height: 2.7rem;
+    position: relative;
+   color: white;
+    top: -0px;
+    background-color: lawngreen;
+    border-right-style: none;
+    border-bottom-style: none;
+    border-top-style: none;
+    border-radius: 3px 3px 3px 3px;
+    border-left-color: lawngreen;
+}
+.third-section {
+    margin-left: 2%;
+}
+.hrr {
+    width: 107.1%;
+}
 
 
 
@@ -852,8 +932,48 @@ hr {
                             <p>Web Developer</p>
                             </div>
                         </div>
+                        <div class="footers">
+                            <div class="first-section">
+                            <h2>TOBI'S STORES</h2>
+                            <p>Founded 2 years ago, Tobi's store boost a safe and healthy food that's good for the body.</p>
+                            <span class="fa fa-map-marker">  123 London Street, United Kingdom</span>
+                            <span class="fa fa-envelope">    KazeemQuayum67@gmail.com</span>
+                            <span class="fa fa-phone">  08109713706</span>
+                            </div>
+                            <div class="second-section">
+                                <h2>About Us</h2>
 
+                                <ul class="list-foot">
+                                    <li><a href="">About Us</a></li>
+                                    <li><a href="">Contact Us</a></li>
+                                    <li><a href="">My Account</a></li>
+                                    <li><a href="">Shop Cart</a></li>
+                                    <li><a href="">Checkout</a></li>
+                                </ul>
+                            </div>
+                            <div class="second-section">
+                                <h2>Information</h2>
+
+                                <ul class="list-foot">
+                                    <li><a href="">Support Center</a></li>
+                                    <li><a href="">Customer Support</a></li>
+                                    <li><a href="">Privacy policy update</a></li>
+                                    <li><a href="">Terms & Conditons</a></li>
+                                    <li><a href="">Return Policy</a></li>
+                                </ul>
+                            </div>
+                            <div class="third-section">
+                                <h2>Our Newsletter</h2>
+                                <p>Register now to get updates on promotions and coupons</p>
+                                <input type="text" placeholder="Enter your email...">
+                                <button>Sunscribe</button>
+                            </div>
+                            <div>
+                                hi
+                            </div>
+                          </div>
               </div>
+             
 
              
   </div>
@@ -876,6 +996,7 @@ hr {
     <p class="quan"><span id="span-11">quantity</span>  = <del>N</del><span class="span-3"></span></p>
     </div>
     <button onclick="remTom(event)" class="button-tom">Remove from the cart item</button>
+    <hr class="hrr">
 
   </div>
   <div class="apple-div">
@@ -889,6 +1010,7 @@ hr {
     <p><span id="span-13">quantity</span>  = <del>N</del><span class="span-4"></span></p>
     </div>
     <button onclick="remApple(event)" class="button-app">Remove from the cart item</button>
+    <hr class="hrr">
 
   </div>
   <div class="ber-div">
@@ -902,6 +1024,7 @@ hr {
     <p><span id="span-15">quantity</span>  = <del>N</del><span class="span-5"></span></p>
     </div>
     <button onclick="remBer(event)" class="button-ber">Remove from the cart item</button>
+    <hr class="hrr">
 
   </div>
   <div class="check-out">
