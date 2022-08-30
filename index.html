@@ -854,6 +854,45 @@ font-size: 1.3rem;
     
     width: 100%;
 }
+.drop-dow {
+    background-color: mintcream;
+    color: red;
+    width: 65%;
+    height: 34rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+   display: none;
+   animation-duration: 1.3s;
+    z-index: 3;
+    font-family: monospace;
+    padding-bottom: 2%;  
+    text-align: center;
+    font-size: 1.5rem;
+   
+}
+.drop-dow > p > a {
+    text-decoration: none;
+    color: black;
+   
+    
+}
+.drop-dow > p {
+    margin-bottom: 20%;
+}
+.drop-dow > span {
+    float: right;
+}
+@keyframes drop {
+    from {left: -30rem}
+    to {left: 0}
+    
+}
+@keyframes drops {
+    from {left: 0rem}
+    to {left: -30rem}
+    
+}
 
 
 
@@ -863,7 +902,7 @@ font-size: 1.3rem;
 </head>
 <body  onscroll="scrFunction()">
     <div class="div-1">
-        <i class="icon fa fa-bars"></i>
+        <i class="icon fa fa-bars" onclick="dropdownFunction()"></i>
          <span>Tobi's Store</span>
          <i class="icons fa fa-shopping-cart" onclick="hideFunction()"></i>
          <button id="button-11" onclick="hideFunction()">0</button>
@@ -873,6 +912,18 @@ font-size: 1.3rem;
     </div>
      <div class="removed-succ">
         <p>your cart item has been removed <span class="fa fa-times"></span></p>
+            </div>
+            <div class="drop-dow">
+                <span class=" fa fa-times" onclick="closeFunction()"></span>
+               <P><a href="">Home</a></P>
+               <hr>
+               <P><a href="">Store</a></P>
+               <hr>
+               <P><a href="">Contacts</a></P>
+               <hr>
+               <P><a href="">Faq</a></P>
+               <hr>
+               <P><a href="">About us</a></P>
             </div>
    <div class="div-2">
 <h5 id="Natu">Natural Foods</h5>
@@ -1113,6 +1164,12 @@ font-size: 1.3rem;
    var voos = setInterval(cartssFunction, 20)
    var qoos = setInterval(cartsssFunction, 20)
    setInterval(slideFunction, 1000)
+   function dropdownFunction() {
+    let a = document.querySelector(".drop-dow")
+    a.style.animationName = "drop"
+    a.style.display = "block"
+    a.style.left = 0
+   }
    function slideFunction() {
     let r =document.querySelector(".main-slide")
     let c = new Date().getSeconds()
@@ -1147,6 +1204,12 @@ a.innerHTML = p.innerHTML
    function emaFun() {
     let a = document.querySelector(".email-field")
     a.style.border = "white"
+   }
+   function closeFunction() {
+    let r = document.querySelector(".drop-dow")
+    r.style.animationName = "drops"
+    r.style.animationDuration = "1.7s"
+    r.style.left = "-30rem"
    }
    
  function scrFunction() {
