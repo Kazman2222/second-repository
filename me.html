@@ -45,14 +45,16 @@
 .search {
     
     
-    width: 100%;
+    width: 98.5%;
     height: 60px;
    
-   margin-top: 1%;
+  margin: 1% 0%;
+
     font-size: 1.5rem;
 display: flex;
 flex-direction: row;
-gap: 31.2%;
+gap: 13.2%;
+
    
     
    
@@ -64,6 +66,53 @@ gap: 31.2%;
     height: 20rem;
     background-repeat: no-repeat;
 }
+.filters {
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 1%;
+}
+#sort {
+    margin-right: 10%;
+    width: 110%;
+    height: 2rem;
+    border-radius: 5px 5px 5px 5px;
+}
+#categories {
+    
+    width: 110%;
+    height: 2rem;
+    border-radius: 5px 5px 5px;
+}
+.categories {
+    margin-left: 3%;
+}
+.menu {
+    margin-left: 3%;
+}
+.cabbage > img {
+    width: 65%;
+    margin: 0 15%;
+}
+.section {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+.cabbages > img {
+    width: 60%;
+   height: 97%;
+  
+    margin: 0 20%;
+}
+.fifth-div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 
 
 
@@ -84,23 +133,48 @@ gap: 31.2%;
             <h2>Our Categories</h2>
           </div>
           <div class="search">
+           
           
             <div class="categories">
-           <select name="" id="categories">
+          <select name="" id="categories">
             <option value="Vegetable">Vegetable</option>
             <option value="Fruits">fruits</option>
             <option value="Beverages">Beverages</option>
            </select>
             </div>
             <div class="sort">
-                <select name="" id="sort">
+               <select name="sortby" id="sort">
                     <option value="Default">Default</option>
                     <option value="Alphabetical">Alphabetical</option>
                     <option value="Availabilty">Availabilty</option>
                    </select>
             </div>
+            <div class="filters">
+                <i class="fa fa-sliders"></i> 
+<span>filters</span>
+            </div>
+          
 
           </div>
+          <div class="fifth-div">
+            <div class="section">
+                <div class="cabbage">
+                    <img src="cabbage-1.jpg" alt="">
+                </div>
+                <div class="cabbages">
+                    <img src="cabbage-1.jpg" alt="">
+                </div>
+            </div>
+            <div class="section">
+                <div class="cabbage">
+                    <img src="cabbage-1.jpg" alt="">
+                </div>
+                <div class="cabbages">
+                    <img src="cabbage-1.jpg" alt="">
+                </div>
+            </div>
+          </div>
+         
         
        
 
