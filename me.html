@@ -117,8 +117,13 @@ gap: 13.2%;
     flex-direction: row;
     gap: 0px;
 }
+.sections {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+}
 .cabbages > img {
-    width: 84%;
+    width: 86%;
    
    
   
@@ -127,7 +132,7 @@ gap: 13.2%;
 .fifth-div {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
 }
 .cabbages > p {
     margin-left: 8%;
@@ -147,17 +152,19 @@ gap: 13.2%;
 }
 .banana > img {
     width: 86%;
-    margin-bottom: 8%;
+    margin-bottom: 5%;
+    
    
   
   
     margin-left: 5%;
 }
 .banana > p{
-    margin-left: 8%;
+    margin-left: 5%;
+    
 }
 .banana > strong {
-    margin-left: 7%;
+    margin-left: 5%;
 }
 .banana > button {
     margin-left: 8%;
@@ -168,13 +175,23 @@ gap: 13.2%;
     background-color: green;
     color: white;
     font-size: 1.1rem;
+    
+}
+.banana {
+    border: 2px transparent;
 }
 .garlic > img {
-    width: 75%;
+    width: 85%;
    margin-left: 13%;
+   margin-bottom: 5%;
 }
-.garlic > p, strong {
+.garlic > p{
     margin-left: 15%;
+    
+}
+.garlic > strong {
+    margin-left: 15%;
+    
 }
 .garlic > button {
     margin-left: 15%;
@@ -185,6 +202,10 @@ gap: 13.2%;
     background-color: green;
     color: white;
     font-size: 1.1rem;
+}
+.garlic {
+    border: 2px transparent;
+    
 }
 .cabbagess > p {
     margin-left: 8%;
@@ -213,7 +234,7 @@ gap: 13.2%;
     <div class="div-1">
         <i class="icon fa fa-bars"></i>
          <span>Tobi's store</span>
-         <i class="icons fa fa-home"></i>
+         <a href="index.html" class="icons"> <i class=" fa fa-home"></i></a>
           </div>
           <div class="fourth-div">
 
@@ -250,30 +271,30 @@ gap: 13.2%;
                 <div class="cabbage">
                     <img src="tomato.jpg" alt="" class="img-2">
                     <strong class="strong-2">Name: Tomato</strong>
-                    <p>price:<del>N</del>1200</p>
+                    <p class="paras-2">price:<del>N</del>1200</p>
                     <p class="para-2">Availabilty: In stock</p>
                     <button>Add to Cart</button>
                 </div>
                 <div class="cabbages">
-                    <img src="berries.jpg" alt="">
-                    <strong>Name: Berries</strong>
-                    <p>price:<del>N</del>1200</p>
-                    <p>Availabilty: In stock</p>
+                    <img src="bana.jpg" alt="" class="img-3">
+                    <strong class="strong-3">Name: Banana</strong>
+                    <p class="paras-3">price:<del>N</del>1500</p>
+                    <p class="para-3">Availabilty: In stock</p>
                     <button>Add to Cart</button>
                 </div>
             </div>
             <div class="section">
                 <div class="garlic">
-                    <img src="cabbages.jpg" alt="">
-                    <strong>Name: Cabbage</strong>
-                    <p>price:<del>N</del>1200</p>
-                    <p>Availabilty: In stock</p>
+                    <img src="berries.jpg" alt="" class="img-4">
+                    <strong class="strong-4">Name: Berries</strong>
+                    <p class="paras-4">price:<del>N</del>1800</p>
+                    <p class="para-4">Availabilty: In stock</p>
                     <button>Add to Cart</button>
                 </div>
                 <div class="banana">
-                    <img src="bana.jpg" alt="" class="img-1">
-                    <strong class="strong-1">Name: Banana</strong>
-                    <p>price:<del>N</del>1200</p>
+                    <img src="garlic.jpg" alt="" class="img-1">
+                    <strong class="strong-1">Name: Garlics</strong>
+                    <p class="paras-1">price:<del>N</del>1250</p>
                     <p class="para-1">Availabilty: In stock</p>
                     <button class="button-1">Add to Cart</button>
                 </div>
@@ -287,7 +308,7 @@ gap: 13.2%;
   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
-        setInterval(myFunction, 100)
+       setInterval(myFunction, 100)
         
 function myFunction() {
     let a = document.querySelector("#sort")
@@ -301,10 +322,30 @@ function myFunction() {
    let w = document.querySelector(".img-2")
     let x = document.querySelector(".strong-2")
     let y = document.querySelector(".para-2")
+    let z = document.querySelector(".paras-2")
+    let k = document.querySelector(".img-3")
+    let i = document.querySelector(".paras-3")
+    let l = document.querySelector(".img-4")
+    let m = document.querySelector(".strong-3")
+    let n = document.querySelector(".strong-4")
+    let e = document.querySelector(".paras-4")
+    let g = document.querySelector(".paras-1")
+
    
     if (a.value == "Alphabetical") {
        q.src = "tomato.jpg"
+       k.src = "berries.jpg"
+       l.src = "garlic.jpg"
+       w.style.width = "85%"
+       q.style.width = "80%"
+       
+       m.innerHTML = "Name : Berries"
+       n.innerHTML = "Name : Garlics"
        p.innerHTML = "Name : Tomato"
+       z.innerHTML = "price : <del>N</del>1500"
+       i.innerHTML = "price : <del>N</del>1800"
+       e.innerHTML = "price : <del>N</del>1250"
+       g.innerHTML = "price : <del>N</del>1200"
        r.innerHTML = "Availabilty: In stock"
        w.src = "bana.jpg"
        x.innerHTML = "Name : Banana"
@@ -314,12 +355,12 @@ function myFunction() {
      
      
     } else if (a.value == "Default") {
-        q.src = "bana.jpg"
-       p.innerHTML = "Name : Banana"
-       r.innerHTML = "Availabilty: In stock"    
-       w.src = "tomato.jpg"
-       x.innerHTML = "Name : Tomato"
-       y.innerHTML = "Availabilty: In stock"
+       // q.src = "bana.jpg"
+      // p.innerHTML = "Name : Banana"
+      // r.innerHTML = "Availabilty: In stock"    
+    //   w.src = "tomato.jpg"
+     //  x.innerHTML = "Name : Tomato"
+     //  y.innerHTML = "Availabilty: In stock"
     }
 
 }
