@@ -76,13 +76,13 @@ gap: 13.2%;
 }
 #sort {
     margin-right: 10%;
-    width: 110%;
+    width: 100%;
     height: 2rem;
     border-radius: 5px 5px 5px 5px;
 }
 #categories {
     
-    width: 110%;
+    width: 130%;
     height: 2rem;
     border-radius: 5px 5px 5px;
 }
@@ -96,7 +96,10 @@ gap: 13.2%;
     width: 80%;
    margin-left: 13%;
 }
-.cabbage > p {
+.cabbage > p{
+    margin-left: 15%;
+}
+.cabbage > strong {
     margin-left: 15%;
 }
 .cabbage > button {
@@ -105,6 +108,9 @@ gap: 13.2%;
     border-radius: 3px 3px 3px 3px;
     height: 2rem;
     border: none;
+    background-color: green;
+    color: white;
+    font-size: 1.1rem;
 }
 .section {
     display: flex;
@@ -126,23 +132,32 @@ gap: 13.2%;
 .cabbages > p {
     margin-left: 8%;
 }
+.cabbages > strong {
+    margin-left: 8%;
+}
 .cabbages > button {
     margin-left: 8%;
     width: 70%;
     border-radius: 3px 3px 3px 3px;
     height: 2rem;
     border: none;
+    background-color: green;
+    color: white;
+    font-size: 1.1rem;
 }
 .banana > img {
     width: 86%;
-    margin-top: 1%;
+    margin-bottom: 8%;
    
   
   
     margin-left: 5%;
 }
-.banana > p {
+.banana > p{
     margin-left: 8%;
+}
+.banana > strong {
+    margin-left: 7%;
 }
 .banana > button {
     margin-left: 8%;
@@ -150,12 +165,15 @@ gap: 13.2%;
     border-radius: 3px 3px 3px 3px;
     height: 2rem;
     border: none;
+    background-color: green;
+    color: white;
+    font-size: 1.1rem;
 }
 .garlic > img {
     width: 75%;
    margin-left: 13%;
 }
-.garlic > p {
+.garlic > p, strong {
     margin-left: 15%;
 }
 .garlic > button {
@@ -164,6 +182,25 @@ gap: 13.2%;
     border-radius: 3px 3px 3px 3px;
     height: 2rem;
     border: none;
+    background-color: green;
+    color: white;
+    font-size: 1.1rem;
+}
+.cabbagess > p {
+    margin-left: 8%;
+}
+.cabbagess > strong {
+    margin-left: 8%;
+}
+.cabbagess > button {
+    margin-left: 8%;
+    width: 70%;
+    border-radius: 3px 3px 3px 3px;
+    height: 2rem;
+    border: none;
+    background-color: green;
+    color: white;
+    font-size: 1.1rem;
 }
 
 
@@ -197,7 +234,7 @@ gap: 13.2%;
             <div class="sort">
                <select name="sortby" id="sort">
                     <option value="Default">Default</option>
-                    <option value="Alphabetical">Alphabetical</option>
+                    <option value="Alphabetical" id="value-1">Alphabetical</option>
                     <option value="Availabilty">Availabilty</option>
                    </select>
             </div>
@@ -211,13 +248,15 @@ gap: 13.2%;
           <div class="fifth-div">
             <div class="section">
                 <div class="cabbage">
-                    <img src="tomato.jpg" alt="">
+                    <img src="tomato.jpg" alt="" class="img-2">
+                    <strong class="strong-2">Name: Tomato</strong>
                     <p>price:<del>N</del>1200</p>
-                    <p>Availabilty: In stock</p>
+                    <p class="para-2">Availabilty: In stock</p>
                     <button>Add to Cart</button>
                 </div>
                 <div class="cabbages">
                     <img src="berries.jpg" alt="">
+                    <strong>Name: Berries</strong>
                     <p>price:<del>N</del>1200</p>
                     <p>Availabilty: In stock</p>
                     <button>Add to Cart</button>
@@ -226,18 +265,21 @@ gap: 13.2%;
             <div class="section">
                 <div class="garlic">
                     <img src="cabbages.jpg" alt="">
+                    <strong>Name: Cabbage</strong>
                     <p>price:<del>N</del>1200</p>
                     <p>Availabilty: In stock</p>
                     <button>Add to Cart</button>
                 </div>
                 <div class="banana">
-                    <img src="bana.jpg" alt="">
+                    <img src="bana.jpg" alt="" class="img-1">
+                    <strong class="strong-1">Name: Banana</strong>
                     <p>price:<del>N</del>1200</p>
-                    <p>Availabilty: In stock</p>
-                    <button>Add to Cart</button>
+                    <p class="para-1">Availabilty: In stock</p>
+                    <button class="button-1">Add to Cart</button>
                 </div>
             </div>
           </div>
+         
          
         
        
@@ -245,7 +287,35 @@ gap: 13.2%;
   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
+        setInterval(myFunction, 100)
+        
+function myFunction() {
+    let a = document.querySelector("#sort")
+    let b = document.querySelector("#value-1")
+    let c = document.querySelector(".cabbage")
+    let q = document.querySelector(".img-1")
+    let p = document.querySelector(".strong-1")
+    let r = document.querySelector(".para-1")
+    let t = document.querySelector(".button-1")
+   let d = document.querySelector(".banana")
+   let w = document.querySelector(".img-2")
+    let x = document.querySelector(".strong-2")
+    let y = document.querySelector(".para-2")
+   
+    if (a.value == "Alphabetical") {
+       q.src = "tomato.jpg"
+       p.innerHTML = "Name : Tomato"
+       r.innerHTML = "Availabilty: In stock"
+       w.src = "bana.jpg"
+       x.innerHTML = "Name : Banana"
+       y.innerHTML = "Availabilty: In stock"
 
+   
+     
+     
+    } 
+
+}
 
     </script>
 </body>
