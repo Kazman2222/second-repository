@@ -240,7 +240,7 @@ gap: 13.2%;
 
         </div>
           <div class="menu">
-            <h2>Our Categories</h2>
+            <h2 id="demo">Our Categories</h2>
           </div>
           <div class="search">
            
@@ -308,7 +308,8 @@ gap: 13.2%;
   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
-       setInterval(myFunction, 100)
+let us =       setInterval(myFunction, 100)
+
         
 function myFunction() {
     let a = document.querySelector("#sort")
@@ -333,6 +334,7 @@ function myFunction() {
 
    
     if (a.value == "Alphabetical") {
+        
        q.src = "tomato.jpg"
        k.src = "berries.jpg"
        l.src = "garlic.jpg"
@@ -350,26 +352,28 @@ function myFunction() {
        w.src = "bana.jpg"
        x.innerHTML = "Name : Banana"
        y.innerHTML = "Availabilty: In stock"
+    
 
    
      
      
     } else if (a.value == "Default") {
+        
         k.src = "bana.jpg"
       m.innerHTML = "Name : Banana"
     
-      i.innerHTML = "price : <del>N</del>1500"
-      // r.innerHTML = "Availabilty: In stock"    
+     i.innerHTML = "price : <del>N</del>1500"
+       r.innerHTML = "Availabilty: In stock"    
        w.src = "tomato.jpg"
        x.innerHTML = "Name : Tomato"
-       z.innerHTML = "price : <del>N</del>1200"
-     //  y.innerHTML = "Availabilty: In stock"
-     l.src = "berries.jpg"
+      z.innerHTML = "price : <del>N</del>1200"
+       y.innerHTML = "Availabilty: In stock"
+   l.src = "berries.jpg"
      n.innerHTML = "Name : Berries"
-     e.innerHTML = "price : <del>N</del>1800"
+    e.innerHTML = "price : <del>N</del>1800"
 
-     q.src = "garlic.jpg"
-     p.innerHTML = "Name : garlic"
+  q.src = "garlic.jpg"
+    p.innerHTML = "Name : garlic"
      g.innerHTML = "price : <del>N</del>1250"
      q.style.width = "85%"
     }
